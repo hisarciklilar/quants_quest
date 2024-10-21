@@ -7,29 +7,29 @@
 /* =========================================== */
 
 .rock-salt-regular {
-  font-family: "Rock Salt", cursive;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Rock Salt", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .happy-monkey-regular {
-  font-family: "Happy Monkey", system-ui;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Happy Monkey", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .lexend-light {
-  font-family: "Lexend", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .lexend-regular {
-  font-family: "Lexend", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* ============================================ */
@@ -55,7 +55,7 @@ body {
     /* Generic project styles */
     color: #3a3a3a;
     font-family: lexend-regular, sans-serif;
-  }  
+}  
 
 /* Below, I got the idea of a box-shadow from love-running walkthrough, modified the code slightly */
 header {
@@ -69,21 +69,37 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: baseline;
-  }
+}
   
-  header a {
+header a {
     text-decoration: none;
     color: inherit;
-  }
+}
   
-  h1 {
+h1 {
     text-align: center;
     font-family: "Rock salt", sans-serif;
     color: #3a3a3a;
     letter-spacing: 5px;
-    font-size: 120%;
-  }
+    font-size: 100%;
+}
 
+h2 {
+    text-align: center;
+    font-family: "Happy Monkey", sans-serif;
+    letter-spacing: 2px;
+    font-size: 120%;
+    padding-top: 5px;
+  }
+  
+h3 {
+    text-align: center;
+    font-family: "Lexend", sans-serif;
+    letter-spacing: 2px;
+    font-size: 100%;
+    font-weight: bold;
+    padding-top: 10px;
+  }
 
 /* In mobile phones, the navbar style will be a dropdown list */
 /* Copied the following code from CI love-running walkthrough example with some modifications */
@@ -95,61 +111,63 @@ nav {
     box-shadow: 2px 2px 2px gray;
     display: none;
     top: 100%;
-  }
+}
   
-  /* ============= */
-  /* Header styles */
-  /* ============= */
+/* ============= */
+/* Header styles */
+/* ============= */
   
-  #menu {
+#menu {
     font-size: 100%;
     letter-spacing: 2px;
     list-style-type: none;
     margin-left: 2em;
     font-family: "Happy Monkey", sans-serif;
-  }
+}
   
-  #menu>li {
+#menu>li {
     margin-bottom: 0.5em;
-  }
+}
   
-  .active {
+.active {
     border-bottom: 1px solid seagreen;
     box-shadow: 2px 2px 2px gray;
-  }
+}
   
-  /* ================= */
-  /* Navigation toggle */
-  /* ================= */
+/* ================= */
+/* Navigation toggle */
+/* ================= */
   
-  /* Below (the three toggle-related id and classes) are copied from CI love-running walkthrough example */
-  #nav-toggle:checked~nav {
+/* Below (the three toggle-related id and classes) are copied from CI love-running walkthrough example */
+#nav-toggle:checked~nav {
     display: block;
-  }
+}
   
-  /* Hide the checkbox */
-  #nav-toggle {
+/* Hide the checkbox */
+#nav-toggle {
     display: none;
-  }
+}
   
-  .nav-toggle-label {
+.nav-toggle-label {
     font-size: 2rem;
-  }
+}
 
 /* ***************** */
 /* CSS for quiz page */
 /* ***************** */
 
 #quiz-container {
-    background-color: beige;
-    width: 90vw;
-    height: 60vh;
-    /* text-align: center; */
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 20vh;
+    background-color: rgba(223, 219, 219, 0.862);
+    width: 80vw;
+    height: 80vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 15vh;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px gray;
 }
+
 
 /* ====================== */
 /* CSS for subscribe page */
@@ -157,89 +175,87 @@ nav {
 
 /* CSS used for the subscribe.html page is copied from my portfolio project 1 with slight modifications*/
 
-/* I used examples from love-running walkthrough and Coders Coffee House website with modifications  */
-select {
-  height: 30px;
-  width: 100px;
-  padding-left: 10px;
-  margin-bottom: 30px;
-}
-
 #subscribe h2 {
-  text-align: left;
-  font-size: 120%;
+    text-align: left;
+    font-size: 120%;
 }
 
 #subscribe p {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 #subscribe-form {
-  background-color: rgba(223, 219, 219, 0.862);
-  padding: 50px;
-  width: 360px;
-  margin: 200px auto;
-  border-radius: 10px;
+    background-color: rgba(223, 219, 219, 0.862);
+    padding: 50px;
+    width: 360px;
+    margin: 100px auto;
+    border-radius: 10px;
 }
 
 .personal-detail {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 input[type=text],
 input[type=email] {
-  height: 30px;
-  width: 50%;
-  padding-left: 10px;
-  margin: 10px 0;
+    height: 30px;
+    width: 50%;
+    padding-left: 10px;
+    margin: 10px 0;
 }
 
 .block-label {
-  display: block;
+    display: block;
+}
+
+select {
+    height: 30px;
+    width: 100px;
+    padding-left: 10px;
+    margin-bottom: 30px;
 }
 
 #feedback {
-  padding: 10px;
-  margin-bottom: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
 .checkbox-margin label {
-  margin-left: 5px;
-  margin-right: 30px;
+    margin-left: 5px;
+    margin-right: 30px;
 }
 
 .confirm {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
 }
 
 input[type=submit] {
-  margin-top: 40px;
-  margin-left: 0.75rem;
-  padding: 0.75rem;
-  background-color: #21643E;
-  color: white;
-  border: solid 1px #3a3a3a;
-  border-radius: 5px;
-  width: 100px;
-  font-size: medium;
+    margin-top: 40px;
+    margin-left: 0.75rem;
+    padding: 0.75rem;
+    background-color: #21643E;
+    color: white;
+    border: solid 1px #3a3a3a;
+    border-radius: 5px;
+    width: 100px;
+    font-size: medium;
 }
 
 input[type=reset] {
-  margin-top: 40px;
-  margin-left: 0.75rem;
-  padding: 0.75rem;
-  background-color: white;
-  color: #21643E;
-  border: solid 1px #3a3a3a;
-  border-radius: 5px;
-  font-size: medium;
+    margin-top: 40px;
+    margin-left: 0.75rem;
+    padding: 0.75rem;
+    background-color: white;
+    color: #21643E;
+    border: solid 1px #3a3a3a;
+    border-radius: 5px;
+    font-size: medium;
 }
 
 .thanks {
@@ -256,39 +272,62 @@ input[type=reset] {
 @media screen and (min-width: 768px) {
 
     h1 {
-      position: relative;
-      font-size: 160%;
+        position: relative;
+        font-size: 130%;
     }
   
+    h2 {
+        letter-spacing: 2px;
+        font-size: 130%;
+        padding-top: 5px;
+      }
+      
+    h3 {
+        text-align: center;
+        font-family: "Lexend", sans-serif;
+        letter-spacing: 2px;
+        font-size: 110%;
+        font-weight: bold;
+        padding-top: 10px;
+      }
     /* Header */
     nav {
-      display: block;
-      position: absolute;
-      box-shadow: none;
-      width: fit-content;
-      padding-right: 1rem;
-      width: 100%;
+        display: block;
+        position: absolute;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+        width: 100%;
     }
   
     #menu {
-      display: flex;
-      padding-top: 20px;
+        display: flex;
+        padding-top: 20px;
     }
   
     #menu>li {
-      padding-left: 1rem;
-      padding-right: 1rem;
-      font-size: 95%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 95%;
     }
   
     /* Below is copied from CI love-running walkthrough example */
     .nav-toggle-label {
-      display: none;
+        display: none;
     }
   
+    /* CSS for quiz page */
+
+    #quiz-container {
+        margin-top: 20vh;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px gray;
+    }
     /* Subscribe page */
     #subscribe-form {
         width: 700px;
+        margin: 150px auto;
     }
 
 /* ======================================= */
@@ -298,17 +337,21 @@ input[type=reset] {
 @media screen and (min-width: 992px) {
 
     h1 {
-      position: relative;
-      font-size: 200%;
+        position: relative;
+        font-size: 150%;
     }
   
     #menu>li {
-      padding-left: 2rem;
-      padding-right: 2rem;
-      font-size: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 100%;
     }
   
     #menu a:hover {
-      color: seagreen;
+        color: seagreen;
     }
   
+    /* Subscribe page */
+    #subscribe-form {
+        margin: 200px auto;
+    }
