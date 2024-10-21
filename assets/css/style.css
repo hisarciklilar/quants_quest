@@ -43,6 +43,20 @@
   box-sizing: border-box;
 }
 
+/* ============== */
+/* General styles */
+/* ============== */
+
+/* Below copied from CI love-running walkthrough project example with some modifications */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Generic project styles */
+    color: #3a3a3a;
+    font-family: lexend-regular, sans-serif;
+  }  
+
 /* Below, I got the idea of a box-shadow from love-running walkthrough, modified the code slightly */
 header {
     background-color: gold;
@@ -121,8 +135,121 @@ nav {
   .nav-toggle-label {
     font-size: 2rem;
   }
-  
-  /* ================================================== */
+
+/* ***************** */
+/* CSS for quiz page */
+/* ***************** */
+
+#quiz-container {
+    background-color: beige;
+    width: 90vw;
+    height: 60vh;
+    /* text-align: center; */
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 20vh;
+    padding: 20px;
+}
+
+/* ====================== */
+/* CSS for subscribe page */
+/* ====================== */
+
+/* CSS used for the subscribe.html page is copied from my portfolio project 1 with slight modifications*/
+
+/* I used examples from love-running walkthrough and Coders Coffee House website with modifications  */
+select {
+  height: 30px;
+  width: 100px;
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+
+#subscribe h2 {
+  text-align: left;
+  font-size: 120%;
+}
+
+#subscribe p {
+  margin-bottom: 10px;
+}
+
+#subscribe-form {
+  background-color: rgba(223, 219, 219, 0.862);
+  padding: 50px;
+  width: 360px;
+  margin: 200px auto;
+  border-radius: 10px;
+}
+
+.personal-detail {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type=text],
+input[type=email] {
+  height: 30px;
+  width: 50%;
+  padding-left: 10px;
+  margin: 10px 0;
+}
+
+.block-label {
+  display: block;
+}
+
+#feedback {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.checkbox-margin label {
+  margin-left: 5px;
+  margin-right: 30px;
+}
+
+.confirm {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+
+}
+
+input[type=submit] {
+  margin-top: 40px;
+  margin-left: 0.75rem;
+  padding: 0.75rem;
+  background-color: #21643E;
+  color: white;
+  border: solid 1px #3a3a3a;
+  border-radius: 5px;
+  width: 100px;
+  font-size: medium;
+}
+
+input[type=reset] {
+  margin-top: 40px;
+  margin-left: 0.75rem;
+  padding: 0.75rem;
+  background-color: white;
+  color: #21643E;
+  border: solid 1px #3a3a3a;
+  border-radius: 5px;
+  font-size: medium;
+}
+
+.thanks {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    font-size: 150%;
+}
+
+/* ================================================== */
 /* Media query: tablets and larger (768px and higher) */
 /* ================================================== */
 
@@ -159,7 +286,12 @@ nav {
       display: none;
     }
   
-  /* ======================================= */
+    /* Subscribe page */
+    #subscribe-form {
+        width: 700px;
+    }
+
+/* ======================================= */
 /* Media query: laptops (992px and higher) */
 /* ======================================= */
 

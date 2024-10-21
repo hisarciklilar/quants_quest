@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags for search engines -->
+    <meta
+      name="description"
+      content="Quants Quest. A webpage dedicated to teach and test knowledge of Econometrics."
+    >
+    <meta
+      name="keywords"
+      content="statistics, statistical analysis, econometrics, econometric modelling, 
+        data analysis, statistics monster, econometrics monster, fun stats, fun econometrics"
+    >
+    <meta name="author" content="Mehtap Hisarciklilar" >
+    <!-- Favicon -->
+    <!-- Following line is copied from https://www.html-easy.com/learn/how-to-add-a-favicon-in-html/ -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" >
+    <!-- Following 3 lines are copied from love-running walkthrough example -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    >   
+
+    <title>Quants Quest</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <a href="./index.html" aria-label="Go to landing page">
+          <h1>Quants Quest</h1>
+        </a>
+        <!-- Below is to add navbar items as a dropdown list on mobile phones. -->
+        <!-- Code for input is copied from CI love-running walkthrough example -->
+        <input type="checkbox" name="nav-toggle" id="nav-toggle" >
+        <label for="nav-toggle" class="nav-toggle-label"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
+        <!-- Navigation items -->
+        <nav>
+          <ul id="menu">
+            <li><a href="./index.html" class="active" aria-label="Link to landing page">Home</a></li>
+            <li><a href="./quiz.html" aria-label="Link to quants quest quiz ">Quiz</a></li>
+            <li><a href="./subscribe.html" aria-label="Link to subscribe page">Subscribe</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- This subscribe page is a copy from my portfolio project 1 -->
+      <main>
+        <section id="subscribe">
+            <form id="subscribe-form" action="./thank-you.html" method="get">
+              <h2>Join the Community!</h2>
+    
+              <!-- Adding text fields -->
+              <div class="personal-detail">
+                <div>
+                  <label for="first-name">First Name</label>
+                  <input
+                    id="first-name"
+                    type="text"
+                    name="first_name"
+                    placeholder="Your first name"
+                    required
+                    class="block-label"
+                    aria-labelledby="first-name"
+                  >
+                </div>
+                <div>
+                  <label for="last-name">Last Name</label>
+                  <input
+                    id="last-name"
+                    type="text"
+                    name="last_name"
+                    placeholder="Your last name"
+                    required
+                    class="block-label"
+                    aria-labelledby="last-name"
+                  >
+                </div>
+                <div>
+                  <label for="email-address">Email Address</label>
+                  <input
+                    id="email-address"
+                    type="email"
+                    name="email_address"
+                    placeholder="Your email address"
+                    required
+                    class="block-label"
+                    aria-labelledby="email-address"
+                  >
+                </div>
+              </div>
+    
+              <div>
+                <p>What is your age?</p>
+    
+                <label for="age"></label>
+                <select id="age" name="age" required>
+                  <option value="" label="Age"></option>
+                  <option value="under-20">Under 20</option>
+                  <option value="20-24">20-24</option>
+                  <option value="25-29">25-29</option>
+                  <option value="30-34">30-34</option>
+                  <option value="35-39">35-39</option>
+                  <option value="40-44">40-44</option>
+                  <option value="45-49">45-49</option>
+                  <option value="50+">50 or over</option>
+                </select>
+              </div>
+    
+              <p>Which topics would you like us to cover here? (optional)</p>
+              <label for="feedback"></label>
+              <textarea id="feedback" rows="8" cols="30" name="feedback" aria-labelledby="feedback"></textarea>
+    
+              <div class="checkbox-margin">
+                <p>Can we contact you about our monthly meetings?</p>
+                <input
+                  id="yes"
+                  name="inform-consent"
+                  value="yes"
+                  type="radio"
+                  required
+                  aria-labelledby="yes"
+                >
+                <label for="yes">Yes</label>
+    
+                <input
+                  id="no"
+                  name="inform-consent"
+                  value="no"
+                  type="radio"
+                  required
+                  aria-labelledby="no"
+                >
+                <label for="no">No</label>
+              </div>
+              <div class="confirm">
+                <input type="submit" class="block-label" value="Subscribe" aria-label="Submit">
+                <input type="reset" value="Reset Form" aria-label="Reset">
+              </div>
+            </form>
+          </section>
+      </main>
+      
+      <footer>
+
+      </footer>
+      <script
+      src="https://kit.fontawesome.com/7b5152d300.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/script.js"> </script> 
+</body>
+</html>
