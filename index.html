@@ -35,11 +35,42 @@
       sizes="16x16"
       href="./assets/favicon/favicon-16x16.png"
     >   
-    
+
     <title>Quants Quest</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <header>
+        <a href="./index.html" aria-label="Go to landing page">
+          <h1>Quants Quest</h1>
+        </a>
+        <!-- Below is to add navbar items as a dropdown list on mobile phones. -->
+        <!-- Code for input is copied from CI love-running walkthrough example -->
+        <input type="checkbox" name="nav-toggle" id="nav-toggle" >
+        <label for="nav-toggle" class="nav-toggle-label"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
+        <!-- Navigation items -->
+        <nav>
+          <ul id="menu">
+            <li><a href="./index.html" class="active" aria-label="Link to landing page">Home</a></li>
+            <li><a href="./quiz.html" aria-label="Link to quants quest quiz ">Quiz</a></li>
+            <li><a href="./subscribe.html" aria-label="Link to subscribe page">Subscribe</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+
+      </main>
+      
+      <footer>
+
+      </footer>
+      <script
+      src="https://kit.fontawesome.com/7b5152d300.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/js/script.js"> </script> 
 </body>
 </html>
