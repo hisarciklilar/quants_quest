@@ -1,0 +1,182 @@
+/* "Happy Monkey", "Lexend" and "Rock Salt" fonts from Google Fonts */
+/* Rock Salt to be used the header, Happy Monkey in titles, and Lexend for general text */
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Lexend:wght@100..900&family=Rock+Salt&display=swap');
+
+/* =========================================== */
+/* Font style classes copied from google-fonts */
+/* =========================================== */
+
+.rock-salt-regular {
+  font-family: "Rock Salt", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.happy-monkey-regular {
+  font-family: "Happy Monkey", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lexend-light {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lexend-regular {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ============================================ */
+/* Override default styles added by the browser */
+/* ============================================ */
+
+/* Below copied from CI love-running walkthrough project example */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Below, I got the idea of a box-shadow from love-running walkthrough, modified the code slightly */
+header {
+    background-color: gold;
+    padding-top: 20px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 4px 3px #3a3a3a;
+    z-index: 99;
+    /* Below moves dropdown toggle to header */
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  
+  header a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: "Rock salt", sans-serif;
+    color: #3a3a3a;
+    letter-spacing: 5px;
+    font-size: 120%;
+  }
+
+
+/* In mobile phones, the navbar style will be a dropdown list */
+/* Copied the following code from CI love-running walkthrough example with some modifications */
+nav {
+    position: absolute;
+    background-color: gold;
+    width: 100%;
+    left: 0%;
+    box-shadow: 2px 2px 2px gray;
+    display: none;
+    top: 100%;
+  }
+  
+  /* ============= */
+  /* Header styles */
+  /* ============= */
+  
+  #menu {
+    font-size: 100%;
+    letter-spacing: 2px;
+    list-style-type: none;
+    margin-left: 2em;
+    font-family: "Happy Monkey", sans-serif;
+  }
+  
+  #menu>li {
+    margin-bottom: 0.5em;
+  }
+  
+  .active {
+    border-bottom: 1px solid seagreen;
+    box-shadow: 2px 2px 2px gray;
+  }
+  
+  /* ================= */
+  /* Navigation toggle */
+  /* ================= */
+  
+  /* Below (the three toggle-related id and classes) are copied from CI love-running walkthrough example */
+  #nav-toggle:checked~nav {
+    display: block;
+  }
+  
+  /* Hide the checkbox */
+  #nav-toggle {
+    display: none;
+  }
+  
+  .nav-toggle-label {
+    font-size: 2rem;
+  }
+  
+  /* ================================================== */
+/* Media query: tablets and larger (768px and higher) */
+/* ================================================== */
+
+@media screen and (min-width: 768px) {
+
+    h1 {
+      position: relative;
+      font-size: 160%;
+    }
+  
+    /* Header */
+    nav {
+      display: block;
+      position: absolute;
+      box-shadow: none;
+      width: fit-content;
+      padding-right: 1rem;
+      width: 100%;
+    }
+  
+    #menu {
+      display: flex;
+      padding-top: 20px;
+    }
+  
+    #menu>li {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 95%;
+    }
+  
+    /* Below is copied from CI love-running walkthrough example */
+    .nav-toggle-label {
+      display: none;
+    }
+  
+  /* ======================================= */
+/* Media query: laptops (992px and higher) */
+/* ======================================= */
+
+@media screen and (min-width: 992px) {
+
+    h1 {
+      position: relative;
+      font-size: 200%;
+    }
+  
+    #menu>li {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      font-size: 100%;
+    }
+  
+    #menu a:hover {
+      color: seagreen;
+    }
+  

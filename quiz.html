@@ -41,41 +41,72 @@
 </head>
     
 <body>
-    <div id="quiz-container">
-        <h1>Quants Quest Quiz</h1>
-        <div id="question-container">
-            <h2>Question <span>0</span> of 5</h2>
-            <div id="question">
-                This is where the question text will  be
+    <header>
+        <a href="./index.html" aria-label="Go to landing page">
+          <h1>Quants Quest</h1>
+        </a>
+        <!-- Below is to add navbar items as a dropdown list on mobile phones. -->
+        <!-- Code for input is copied from CI love-running walkthrough example -->
+        <input type="checkbox" name="nav-toggle" id="nav-toggle" >
+        <label for="nav-toggle" class="nav-toggle-label"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
+        <!-- Navigation items -->
+        <nav>
+          <ul id="menu">
+            <li><a href="./index.html" class="active" aria-label="Link to landing page">Home</a></li>
+            <li><a href="./quiz.html" aria-label="Link to quants quest quiz ">Quiz</a></li>
+            <li><a href="./subscribe.html" aria-label="Link to subscribe page">Subscribe</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div id="quiz-container">
+            <h1>Quants Quest Quiz</h1>
+            <div id="question-container">
+                <h2>Question <span>0</span> of 5</h2>
+                <div id="question">
+                    This is where the question text will  be
+                </div>
+                <div id="options">
+                    <button>Answer 1</button>
+                    <button>Answer 2</button>
+                    <button>Answer 3</button>
+                    <button>Answer 4</button>
+                </div>
+                <div id="submit-field">
+                    <button>submit</button>
+                </div>
             </div>
-            <div id="options">
-                <button>Answer 1</button>
-                <button>Answer 2</button>
-                <button>Answer 3</button>
-                <button>Answer 4</button>
+            <div id="feedback-container">
+                <div id="feedback">
+                    This is where feedback on the answer will be provided
+                </div>
+                <div id="tell-more">
+                    <p><button>Tell me more</button></p>
+                </div>
+                <div id="next-button">
+                    This is where the next button and a link to a pop-up modale is provided  
+                    <button>Next</button>
+                </div>
             </div>
-            <div id="submit-field">
-                <button>submit</button>
+            <div id="score-container">
+                <!-- The code below is from love-maths walkthrough example -->
+                <p class="scores">Correct Answers <span id="score">0</span></p>
+                <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
             </div>
         </div>
-        <div id="feedback-container">
-            <div id="feedback">
-                This is where feedback on the answer will be provided
-            </div>
-            <div id="tell-more">
-                <p><button>Tell me more</button></p>
-            </div>
-            <div id="next-button">
-                This is where the next button and a link to a pop-up modale is provided  
-                <button>Next</button>
-            </div>
-        </div>
-        <div id="score-container">
-            <!-- The code below is from love-maths walkthrough example -->
-            <p class="scores">Correct Answers <span id="score">0</span></p>
-            <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
-        </div>
-    </div>
+      </main>
+      
+      <footer>
+
+      </footer>
+
+      <script
+      src="https://kit.fontawesome.com/7b5152d300.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/js/script.js"> </script> 
 </body>
 </html>
