@@ -43,14 +43,12 @@ const questions = [
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
-      button.addEventListener("click", function() {
-        if (button.getAttribute("id") === "submit") {
+        if (this.getAttribute("id") === "submit") {
             alert("You clicked submit");
-        } else if (button.getAttribute("id") === "next") {
-            alert("You clicked next button!"); 
+        } else if (this.getAttribute("id") === "info") {
+            alert("You are asking for more info");
         } else {
             alert("you are moving to the next question");
         }
-      }); // close of button event listener
-    } // close of loop across buttons
-})
+    } // close loop across buttons
+}) // close of document load event listener
