@@ -39,7 +39,8 @@ const questions = [
 ];
 
 // Add event listeners
-// I followed the love-maths walkthrough example, though I wrote my own version for this quiz
+// I followed the love-maths walkthrough example to add page load listener 
+// I wrote my own version of the button listeners
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
@@ -47,10 +48,27 @@ document.addEventListener("DOMContentLoaded", function() {
         if (button.getAttribute("id") === "submit") {
             alert("You clicked submit");
         } else if (button.getAttribute("id") === "next") {
-            alert("You clicked next button!"); 
+            // alert("You clicked next button!"); 
+            displayQuestion();
         } else {
-            alert("you are moving to the next question");
+            alert("you want to learn more");
         }
       }); // close of button event listener
     } // close of loop across buttons
-})
+}) // close of load page listener
+
+  // First question is displayed once the page loads
+  displayQuestion();
+
+  function displayQuestion() {
+    let questionIndex = parseInt(document.getElementById("question-number").innerText);
+    let questionNumber = questionIndex + 1;
+    document.getElementById("question-number").textContent = `${questionNumber}`;
+    document.getElementById("question").textContent = questions[questionIndex].question;
+    // display options of the question
+    for (let i=0; i<4; i++) {
+        document.getElementById(`option-${i}`).textContent = questions[questionIndex].answers[`${i}`].text;
+    }
+}
+
+  
