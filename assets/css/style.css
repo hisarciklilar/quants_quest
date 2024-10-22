@@ -94,8 +94,8 @@ h2 {
   
 h3 {
     text-align: center;
-    font-family: "Lexend", sans-serif;
-    letter-spacing: 2px;
+    /* font-family: "Lexend", sans-serif; */
+    letter-spacing: 1px;
     font-size: 100%;
     font-weight: bold;
     padding-top: 10px;
@@ -168,6 +168,86 @@ nav {
     box-shadow: 2px 2px 2px gray;
 }
 
+#question-container {
+    background-color: beige;
+    margin: 10px;
+}
+
+/* #quiz-header {
+    font-family:  sans-serif;
+} */
+
+#question {
+    background-color: bisque;
+    margin: 10px;
+}
+
+#option {
+    margin: 10px;
+}
+
+#submit-field {
+    /* margin: 20px; */
+    text-align: center;
+}
+
+#tell-more {
+    text-align: start;
+    margin-left: 50px;
+}
+
+.btn-tell-more {
+    background-color: rgb(227, 95, 47);
+    color: white;
+    border: 1px solid rgb(227, 95, 47);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.btn-tell-more:hover {
+    background-color: white;
+    color: rgb(227, 95, 47);
+}
+
+#next-button {
+    text-align: end;
+    margin-right: 50px;
+}
+.btn {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #1959cf;
+    color: white;
+    border: 1px solid #1959cf;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #1959cf;
+}
+
+.btn-next {
+    width: 60px;
+}
+
+
+#feedback-container {
+    background-color: aquamarine;
+    margin: 10px;
+}
+
+#score-container {
+    background-color: azure;
+    margin: 10px;
+}
+
+/* The following code is from love-maths walkthrough example */
+.scores {
+    display: inline-block;
+    padding: 25px;
+}
 
 /* ====================== */
 /* CSS for subscribe page */

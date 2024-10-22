@@ -63,20 +63,37 @@
 
       <main>
         <div id="quiz-container">
-            <h2>Quants Quest Quiz</h2>
+            <h2 class="lexend-regular">Quants Quest Quiz</h2>
             <div id="question-container">
-                <h3>Question <span>0</span> of 5</h2>
+                <h3 class="lexend-regular">Question <span>0</span> of 5</h2>
                 <div id="question">
                     This is where the question text will  be
                 </div>
                 <div id="options">
-                    <button>Answer 1</button>
+                    <!-- <button>Answer 1</button>
                     <button>Answer 2</button>
                     <button>Answer 3</button>
-                    <button>Answer 4</button>
+                    <button>Answer 4</button> -->
+                    <p>
+                      <input type="radio" name="option" id="option" required>
+                      <label> Answer 1</label>
+                    
+                    </p>
+                    <p>
+                      <input type="radio" name="option" id="option" required>
+                      <label> Answer 2</label>
+                    </p>
+                    <p>
+                      <input type="radio" name="option" id="option" required>
+                      <label> Answer 3</label>
+                    </p>
+                    <p>
+                      <input type="radio" name="option" id="option" required>
+                      <label> Answer 4</label>
+                    </p>
                 </div>
                 <div id="submit-field">
-                    <button>submit</button>
+                    <button data-type="submit" class="btn">Submit Answer</button>
                 </div>
             </div>
             <div id="feedback-container">
@@ -84,11 +101,10 @@
                     This is where feedback on the answer will be provided
                 </div>
                 <div id="tell-more">
-                    <p><button>Tell me more</button></p>
+                    <p><button class="btn-tell-more">Tell me more</button></p>
                 </div>
-                <div id="next-button">
-                    This is where the next button and a link to a pop-up modale is provided  
-                    <button>Next</button>
+                <div id="next-button">  
+                    <button class="btn btn-next">Next</button>
                 </div>
             </div>
             <div id="score-container">
