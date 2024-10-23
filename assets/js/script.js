@@ -85,12 +85,17 @@ function checkAnswer(){
             let questionNumber = parseInt(document.getElementById("question-number").innerText);
             let questionIndex = questionNumber - 1;
             if (questions[questionIndex].answers[selectedOptionNumber].correct === true) {
+                // below could be one function for correct score calculation
                 alert("this is the correct answer");
                 let correctScore = parseInt(document.getElementById("correct-score").innerText);
                 correctScore++;
                 document.getElementById("correct-score").textContent = `${correctScore}`;
             } else {
+                // below could be one function for incorrect score calculation
                 alert("your answer is wrong");
+                let incorrectTally = parseInt(document.getElementById("incorrect-tally").innerText);
+                incorrectTally++;
+                document.getElementById("incorrect-tally").textContent = `${incorrectTally}`;
             }
             break;
         } else {
