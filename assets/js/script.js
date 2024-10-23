@@ -38,6 +38,9 @@ const questions = [
     }
 ];
 
+// post the number of questions in quiz
+document.getElementById("quiz-length").textContent = questions.length;
+
 // Add event listeners
 // I followed the love-maths walkthrough example to add page load listener 
 // I wrote my own version of the button listeners
