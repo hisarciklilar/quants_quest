@@ -86,6 +86,9 @@ function checkAnswer(){
             let questionIndex = questionNumber - 1;
             if (questions[questionIndex].answers[selectedOptionNumber].correct === true) {
                 alert("this is the correct answer");
+                let correctScore = parseInt(document.getElementById("correct-score").innerText);
+                correctScore++;
+                document.getElementById("correct-score").textContent = `${correctScore}`;
             } else {
                 alert("your answer is wrong");
             }
