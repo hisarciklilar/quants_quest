@@ -81,10 +81,17 @@ function checkAnswer(){
     for (let questionOption of questionOptions) {
         if (questionOption.checked) {
             let selectedOptionNumber = optionNumber;
-            alert(`You selected option ${selectedOptionNumber}`)
+            alert(`You selected option ${selectedOptionNumber}`);
+            let questionNumber = parseInt(document.getElementById("question-number").innerText);
+            let questionIndex = questionNumber - 1;
+            if (questions[questionIndex].answers[selectedOptionNumber].correct === true) {
+                alert("this is the correct answer");
+            } else {
+                alert("your answer is wrong");
+            }
             break;
         } else {
             optionNumber++
         }
-    }
+    } 
 }
