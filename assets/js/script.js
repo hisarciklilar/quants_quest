@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (questionIndex < questions.length) {
                     displayQuestion();
                 } else {
-                    alert("end of game!")
+                    // alert("end of game!");
                     displayEndOfGame();
                 }
             } else {
@@ -90,7 +90,7 @@ function checkAnswer(){
     for (let questionOption of questionOptions) {
         if (questionOption.checked) {
             let selectedOptionNumber = optionNumber;
-            alert(`You selected option ${selectedOptionNumber}`);
+            // alert(`You selected option ${selectedOptionNumber}`);
             let questionNumber = parseInt(document.getElementById("question-number").innerText);
             let questionIndex = questionNumber - 1;
             if (questions[questionIndex].answers[selectedOptionNumber].correct === true) {
@@ -111,4 +111,15 @@ function checkAnswer(){
             optionNumber++
         }
     } 
+}
+
+function displayEndOfGame() {
+    let endOfQuizMessage = `<h3 class="end-of-quiz-message">End of quiz! </h3>`;
+    let correctScore = parseInt(document.getElementById("correct-score").innerText);
+    let incorrectTally = parseInt(document.getElementById("incorrect-tally").innerText);
+    let numberOfQuestions = correctScore + incorrectTally;
+    let endOfQuizScoreMessage = `<h3>Out of ${numberOfQuestions} questions, 
+        you answered ${correctScore} correctly.</h3>`;
+    document.getElementById("question-container").innerHTML = endOfQuizMessage;
+    document.getElementById("feedback-container").innerHTML = endOfQuizScoreMessage;
 }
