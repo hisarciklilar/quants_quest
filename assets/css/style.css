@@ -195,9 +195,12 @@ nav {
     text-align: center;
 }
 
-#tell-more {
+#feedback-buttons {
     text-align: start;
-    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
 }
 
 .btn-tell-more {
@@ -205,8 +208,8 @@ nav {
     color: white;
     border: 1px solid rgb(227, 95, 47);
     padding: 5px;
-    margin: 10px;
     border-radius: 5px;
+    margin: 10px;
 }
 
 .btn-tell-more:hover {
@@ -214,10 +217,6 @@ nav {
     color: rgb(227, 95, 47);
 }
 
-#next-button {
-    text-align: end;
-    margin-right: 50px;
-}
 .btn {
     margin: 10px;
     padding: 5px;
@@ -239,6 +238,11 @@ nav {
 #feedback-container {
     background-color: aquamarine;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 #score-container {
@@ -254,17 +258,34 @@ nav {
 
 .green-border {
     border: 2px solid green;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .red-border {
     border: 2px solid red;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .blue-border {
     border: 2px solid blue;
-    border-radius: 3px;
+    border-radius: 5px;
+}
+
+.positive {
+    color: green;
+}
+
+.negative{
+    color: red;
+}
+
+.feedback {
+    text-align: center;
+    font-family: "lexend", sans-serif;
+    font-size: large;
+    max-width: 600px;
+    padding: 10px;
+    margin-top:10px;
 }
 
 /* ====================== */

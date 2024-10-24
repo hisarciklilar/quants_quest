@@ -119,8 +119,10 @@ function checkAnswer(){
             // alert(`You selected option ${selectedOptionNumber}`);        
             if (questions[questionIndex].answers[selectedOptionNumber].correct === true) {
                 calculateCorrectTally();
+                displayPositiveFeedback();
             } else {
                 calculateIncorrectTally();
+                displayNegativeFeedback();
             }
             break;
         } else {
@@ -129,6 +131,22 @@ function checkAnswer(){
     } 
 }
 
+function displayPositiveFeedback(){
+let html = 
+` <h2> <i class="fa-regular fa-circle-check positive"></i> </h2>
+<div class="feedback positive green-border"> Well done! Your answer is correct. </div>
+`
+document.getElementById("feedback").innerHTML = html;
+}
+
+function displayNegativeFeedback(){
+    let html = 
+    ` <h2><i class="fa-regular fa-circle-xmark negative"></i></h2>
+    <div class="feedback negative red-border"> Unfortunately your answer is incorrect. </div>
+    `
+    document.getElementById("feedback").innerHTML = html;
+    }
+    
 
 function calculateCorrectTally() {
     let correctScore = parseInt(document.getElementById("correct-score").innerText);
