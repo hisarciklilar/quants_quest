@@ -248,6 +248,21 @@ nav {
     padding: 25px;
 }
 
+.green-border {
+    border: 2px solid green;
+    border-radius: 3px;
+}
+
+.red-border {
+    border: 2px solid red;
+    border-radius: 3px;
+}
+
+.blue-border {
+    border: 2px solid blue;
+    border-radius: 3px;
+}
+
 /* ====================== */
 /* CSS for subscribe page */
 /* ====================== */
