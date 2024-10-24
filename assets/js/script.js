@@ -142,7 +142,7 @@ document.getElementById("feedback").innerHTML = html;
 function displayNegativeFeedback(){
     let html = 
     ` <h2><i class="fa-regular fa-circle-xmark negative"></i></h2>
-    <div class="feedback negative red-border"> Unfortunately your answer is incorrect. </div>
+    <div class="feedback negative red-border"> Your answer is incorrect. </div>
     `
     document.getElementById("feedback").innerHTML = html;
     }
