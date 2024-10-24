@@ -186,6 +186,10 @@ nav {
     margin: 10px;
 }
 
+.option-container{
+    margin: 20px;
+}
+
 #submit-field {
     /* margin: 20px; */
     text-align: center;

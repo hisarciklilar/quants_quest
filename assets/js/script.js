@@ -71,6 +71,22 @@ document.addEventListener("DOMContentLoaded", function() {
 // First question is displayed once the page loads
 displayQuestion();
 
+
+// // below gets the options for question and add event listeners
+// for (let i=0; i<4; i++) {
+//     let option = document.getElementsByClassName('option-container')[i];
+//     // I used an example from the following page to insert a pointer cursor
+//     // https://www.w3docs.com/snippets/css/how-to-change-cursor-on-hover-in-css.html
+//     option.style.cursor = "pointer";
+//     // option.style.border="solid 1px";
+//     option.addEventListener("click", activateOption);
+// }
+
+// function activateOption() {
+//     this.style.border = "2px solid red"
+// }
+
+
 function displayQuestion() {
     let questionIndex = parseInt(document.getElementById("question-number").innerText);
     let questionNumber = questionIndex + 1;
@@ -78,9 +94,16 @@ function displayQuestion() {
     document.getElementById("question").textContent = questions[questionIndex].question;
     // display options of the question
     for (let i=0; i<4; i++) {
-        document.getElementById(`option-${i}`).textContent = questions[questionIndex].answers[i].text;
+        let option=document.getElementsByClassName("option")[i];
+        option.textContent = questions[questionIndex].answers[i].text;
+        option.style.cursor = "pointer";
+        option.addEventListener('click', function(){
+            document.getElementById(`option-${i}`).checked = true;
+            // this.style.color = "blue"
+        })
+        };
     }
-}
+
 
 // The idea of using "querySelectorAll" method and ".checked" property in the code below
 // is taken from an example provided in the following page:
@@ -95,16 +118,8 @@ function checkAnswer(){
             let selectedOptionNumber = optionNumber;
             // alert(`You selected option ${selectedOptionNumber}`);        
             if (questions[questionIndex].answers[selectedOptionNumber].correct === true) {
-                // add border to selected answer
-                // document.getElementById(`option-${selectedOptionNumber}`).style.border = "5px solid green";
-                // document.getElementById(`option-${selectedOptionNumber}`).addClass("green-border");
                 calculateCorrectTally();
             } else {
-                // add border to selected answer
-                // document.getElementById(`option-${selectedOptionNumber}`).style.border = "5px solid red";
-                // document.getElementById(`option-${selectedOptionNumber}`).addClass("red-border");
-                // add border to correct answer
-                // I leave this here because I first need to check how to remove the existing borders in next question
                 calculateIncorrectTally();
             }
             break;
@@ -113,6 +128,7 @@ function checkAnswer(){
         }
     } 
 }
+
 
 function calculateCorrectTally() {
     let correctScore = parseInt(document.getElementById("correct-score").innerText);
@@ -136,10 +152,3 @@ function displayEndOfQuiz() {
     document.getElementById("question-container").innerHTML = endOfQuizMessage;
     document.getElementById("feedback-container").innerHTML = endOfQuizScoreMessage;
 }
-
-// function resetOptions() {
-//     for (let i=0; i<4; i++) {
-//         document.getElementById(`option-${i}`).removeClass("red-border");
-//         document.getElementById(`option-${i}`).removeClass("green-border");
-//     }
-// }
