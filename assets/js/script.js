@@ -7,7 +7,8 @@ const questions = [
             { text: "Normality", correct: false },
             { text: "Homoscedasticity", correct: false },
             { text: "No serial correlation", correct: false }
-        ]
+        ],
+        feedback: "this is the feedback for question 1", 
     },
     {
         question: "Which regresion model's coefficiens show elasticity without further transformation?",
@@ -16,7 +17,8 @@ const questions = [
             { text: "lin-log", correct: false },
             { text: "lin-lin", correct: false },
             { text: "Log-log", correct: true }
-        ]
+        ],
+        feedback: "this is the feedback for question 2",
     },
     {
         question: "Which estimation method relies on minimisation of error sum squared?",
@@ -25,7 +27,8 @@ const questions = [
             { text: "Akaike Information Criterion", correct: false },
             { text: "Maximuum Likelihood Estimation", correct: false },
             { text: "Generalised Method of Moments", correct: false }
-        ]
+        ],
+        feedback: "this is the feedback for question 3",
     },
     {
         question: "Which is not a cause of endogeneity?",
@@ -34,7 +37,8 @@ const questions = [
             { text: "Serial correlation", correct: true },
             { text: "Reverse causality", correct: false },
             { text: "Simultaneity", correct: false }
-        ]
+        ],
+        feedback: "this is the feedback for question 4",
     }
 ];
 
@@ -62,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     displayEndOfQuiz();
                 }
             } else {
-                alert("you want to learn more");
+                provideFeedback();
             }
         }); // close of button event listener
     } // close of loop across buttons
@@ -104,7 +108,6 @@ function displayQuestion() {
         };
     }
 
-
 // The idea of using "querySelectorAll" method and ".checked" property in the code below
 // is taken from an example provided in the following page:
 // https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
@@ -116,6 +119,8 @@ function checkAnswer(){
     for (let questionOption of questionOptions) {
         if (questionOption.checked) {
             let selectedOptionNumber = optionNumber;
+            //line below clears selection after submit
+            document.getElementById(`option-${selectedOptionNumber}`).checked = false;
             // alert(`You selected option ${selectedOptionNumber}`);        
             if (questions[questionIndex].answers[selectedOptionNumber].correct === true) {
                 calculateCorrectTally();
@@ -169,4 +174,8 @@ function displayEndOfQuiz() {
         you answered ${correctScore} correctly.</h3>`;
     document.getElementById("question-container").innerHTML = endOfQuizMessage;
     document.getElementById("feedback-container").innerHTML = endOfQuizScoreMessage;
+}
+
+function provideFeedback() {
+    
 }
