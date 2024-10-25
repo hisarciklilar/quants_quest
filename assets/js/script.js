@@ -9,6 +9,7 @@ const questions = [
             { text: "No serial correlation", correct: false }
         ],
         feedback: "this is the feedback for question 1", 
+        source: "For more information, see Chapter 5",
     },
     {
         question: "Which regresion model's coefficiens show elasticity without further transformation?",
@@ -19,6 +20,7 @@ const questions = [
             { text: "Log-log", correct: true }
         ],
         feedback: "this is the feedback for question 2",
+        source: "For more information, see Chapter 5",
     },
     {
         question: "Which estimation method relies on minimisation of error sum squared?",
@@ -29,6 +31,7 @@ const questions = [
             { text: "Generalised Method of Moments", correct: false }
         ],
         feedback: "this is the feedback for question 3",
+        source: "For more information, see Chapter 5",
     },
     {
         question: "Which is not a cause of endogeneity?",
@@ -39,6 +42,7 @@ const questions = [
             { text: "Simultaneity", correct: false }
         ],
         feedback: "this is the feedback for question 4",
+        source: "For more information, see Chapter 5",
     }
 ];
 
@@ -66,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     displayEndOfQuiz();
                 }
             } else {
-                provideFeedback();
+                provideInformation();
             }
         }); // close of button event listener
     } // close of loop across buttons
@@ -176,6 +180,16 @@ function displayEndOfQuiz() {
     document.getElementById("feedback-container").innerHTML = endOfQuizScoreMessage;
 }
 
-function provideFeedback() {
-    
+function provideInformation() {
+   let html=
+    `   <div class="modal-feedback">
+            this is the feedback on your question. The assumptions of ordinary leadast squares.... 
+        </div>
+        <div class="modal-book">
+            <p>For more information, see Chapter 5</p>
+            <p> Gujarati, D. (2015) Econometrics by Example, 2nd ed. Red Globe Press.</p>
+            <div class="modal-close"><button class="btn-close">Close</button></div>
+        </div>
+        `
+    document.getElementById("information").innerHTML = html;
 }

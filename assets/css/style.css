@@ -395,46 +395,36 @@ input[type=reset] {
     font-size: 150%;
 }
 
-/* The core of the code for the modal pop-up page is mostly taken from the following site
+/* The idea for the information-container class is from the modal page tutorial on the following site
 https://www.w3schools.com/howto/howto_css_modals.asp 
-Styling is my own.
 */
 
-.modal {
-    background-color: goldenrod;
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    font-family: lexend, sans-serif
+#information-container {
+    display: none;
 }
 
-.modal h3 {
-    margin: 3%;
-    font-family: lexend, sans-serif;
-}
-.modal-feedback {
+.modal-information {
     background-color: white;
-    width: 90%;
-    margin-left: 5% ;
+    width: 100%;
+    margin: 2% auto;
     padding: 3%;
     border: black solid 2px;
     border-radius: 15px;
+    font-family: lexend, sans-serif;
+    font-size: small;
 }
 
 .modal-book {
     background-color: white;
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 5%;
+    width: 100%;
+    margin: 2% auto;
+    /* margin-left: 5%;
+    margin-top: 5%; */
     padding: 3%;
     border: black solid 2px;
     border-radius: 15px;
-    color: black
+    font-family: lexend, sans-serif;   
+    font-size: small; 
 }
 
 .modal-close {
@@ -449,18 +439,33 @@ Styling is my own.
 
 .btn-close {
     padding: 5px;
-    background-color: seagreen;
+    background-color: #1959cf;
     color: white;
     letter-spacing: 1px;
-    border: 1px solid seagreen;
+    border: 1px solid #1959cf;
     border-radius: 5px;
 }
 
-.btn-close:hover, .btn-close:focus {
+.btn-close:hover {
     background-color: white;
-    color: seagreen;
-    border: 1px solid seagreen;
+    color: #1959cf;
+    border: 1px solid #1959cf;
 }
+
+  /* The Close Button */
+  .close {
+    color: seagreen;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 /* ================================================== */
 /* Media query: tablets and larger (768px and higher) */
@@ -527,15 +532,14 @@ Styling is my own.
         margin: 150px auto;
     }
 
-    .modal-feedback {
+    .modal-information {
         max-width: 700px;
-        margin: auto;
+        font-size: medium;
     }
     
     .modal-book {
         max-width: 700px;
-        margin: auto;
-        margin-top: 50px;
+        font-size: medium; 
     }
 
 /* ======================================= */
@@ -564,12 +568,10 @@ Styling is my own.
         margin: 200px auto;
     }
 
-    .modal-feedback {
+    .modal-information {
         max-width: 900px;
-        margin: auto;
     }
     
     .modal-book {
         max-width: 900px;
-        margin: 50px auto;
     }
