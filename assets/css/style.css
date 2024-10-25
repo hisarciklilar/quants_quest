@@ -395,6 +395,73 @@ input[type=reset] {
     font-size: 150%;
 }
 
+/* The core of the code for the modal pop-up page is mostly taken from the following site
+https://www.w3schools.com/howto/howto_css_modals.asp 
+Styling is my own.
+*/
+
+.modal {
+    background-color: goldenrod;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    font-family: lexend, sans-serif
+}
+
+.modal h3 {
+    margin: 3%;
+    font-family: lexend, sans-serif;
+}
+.modal-feedback {
+    background-color: white;
+    width: 90%;
+    margin-left: 5% ;
+    padding: 3%;
+    border: black solid 2px;
+    border-radius: 15px;
+}
+
+.modal-book {
+    background-color: white;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+    padding: 3%;
+    border: black solid 2px;
+    border-radius: 15px;
+    color: black
+}
+
+.modal-close {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.modal-book p {
+    margin-top:7px;
+    text-align: center;
+}
+
+.btn-close {
+    padding: 5px;
+    background-color: seagreen;
+    color: white;
+    letter-spacing: 1px;
+    border: 1px solid seagreen;
+    border-radius: 5px;
+}
+
+.btn-close:hover, .btn-close:focus {
+    background-color: white;
+    color: seagreen;
+    border: 1px solid seagreen;
+}
+
 /* ================================================== */
 /* Media query: tablets and larger (768px and higher) */
 /* ================================================== */
@@ -460,6 +527,17 @@ input[type=reset] {
         margin: 150px auto;
     }
 
+    .modal-feedback {
+        max-width: 700px;
+        margin: auto;
+    }
+    
+    .modal-book {
+        max-width: 700px;
+        margin: auto;
+        margin-top: 50px;
+    }
+
 /* ======================================= */
 /* Media query: laptops (992px and higher) */
 /* ======================================= */
@@ -484,4 +562,14 @@ input[type=reset] {
     /* Subscribe page */
     #subscribe-form {
         margin: 200px auto;
+    }
+
+    .modal-feedback {
+        max-width: 900px;
+        margin: auto;
+    }
+    
+    .modal-book {
+        max-width: 900px;
+        margin: 50px auto;
     }
