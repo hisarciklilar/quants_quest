@@ -202,11 +202,14 @@ function displayEndOfQuiz() {
 function provideInformation() {
     document.getElementById("information-container").style.display = "block";
     document.getElementById("question-container").style.display = "none";
+    document.getElementById('feedback').style.display = "none";
+    document.getElementById("info").style.display = "none";
 }
 
 function closeInformation() {
     document.getElementById("information-container").style.display = "none";
     document.getElementById("question-container").style.display = "block";
+    document.getElementById("info").style.display = "block";
 }
 
 
