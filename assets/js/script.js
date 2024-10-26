@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             if (button.getAttribute("id") === "submit") {
                 // alert("You clicked submit");
+                deactivateSubmit();
                 checkAnswer();
             } else if (button.getAttribute("id") === "next") {
                 // alert("You clicked next button!"); 
@@ -114,6 +115,7 @@ function displayQuestion() {
             // this.style.color = "blue"
         })
         };
+    document.getElementById("submit").style.display = "inline";
     }
 
 function displayInformation(index) {
@@ -126,6 +128,9 @@ function displayBookChapter(index) {
     document.getElementById("book-chapter").textContent = questions[index].chapter;
 }
 
+function deactivateSubmit() {
+    document.getElementById("submit").style.display = "none";
+}
 
 // The idea of using "querySelectorAll" method and ".checked" property in the code below
 // is taken from an example provided in the following page:
@@ -199,17 +204,9 @@ function provideInformation() {
     document.getElementById("question-container").style.display = "none";
 }
 
-// function closeInformation(){
-//     alert("hello");
-// }
-
 function closeInformation() {
     document.getElementById("information-container").style.display = "none";
     document.getElementById("question-container").style.display = "block";
-
 }
-// document.getElementById("btn-close").addEventListener("click", function() {
-//     document.getElementById("information-container").style.color = "red";
-//     // document.getElementById("question-container").style.display = "block";
-// }) 
+
 
