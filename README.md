@@ -11,6 +11,13 @@ The designer's aim is to test the user's knowledge on the basic concepts of Econ
 
 ### Manual Testing
 
+The pages and functionality are tested on the following platforms: 
+
+- Debian 
+- Mac OS 24-inch Safari & Google Chrome
+- iPhone 15
+- iPad  
+
 #### Manual Testing: Quiz Page
 
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |

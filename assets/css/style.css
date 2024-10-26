@@ -1,6 +1,6 @@
 /* "Happy Monkey", "Lexend" and "Rock Salt" fonts from Google Fonts */
-/* Rock Salt to be used the header, Happy Monkey in titles, and Lexend for general text */
-@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Lexend:wght@100..900&family=Rock+Salt&display=swap');
+/* Rock Salt to be used the header and Lexend for general text */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Rock+Salt&display=swap');
 
 /* =========================================== */
 /* Font style classes copied from google-fonts */
@@ -8,12 +8,6 @@
 
 .rock-salt-regular {
     font-family: "Rock Salt", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.happy-monkey-regular {
-    font-family: "Happy Monkey", system-ui;
     font-weight: 400;
     font-style: normal;
 }
@@ -105,9 +99,9 @@ h3 {
 
   #index-main {
     margin-top: 100px;
-    /* background-color: #3a3a3a; */
+    flex: 1 0 auto;
   }
-
+  
   #login-container {
     display: flex;
     flex-direction: column;
@@ -143,43 +137,29 @@ h3 {
     color: inherit;
 }
 
-/* ============= */
-/* Header styles */
-/* ============= */
-  
-/* #menu {
-    font-size: 100%;
-    letter-spacing: 2px;
-    list-style-type: none;
-    margin-left: 2em;
-    font-family: "Happy Monkey", sans-serif;
+.align-right {
+    text-align: right;
+    padding-right: 1em;
 }
   
-#menu>li {
-    margin-bottom: 0.5em;
-} */
-  
-/* .active {
-    border-bottom: 1px solid seagreen;
-    box-shadow: 2px 2px 2px gray;
-} */
-  
-/* ================= */
-/* Navigation toggle */
-/* ================= */
-  
-/* Below (the three toggle-related id and classes) are copied from CI love-running walkthrough example */
-#nav-toggle:checked~nav {
-    display: block;
+footer div {
+    font-size: smaller;
+    color: #154229;
+    padding-top: 20px;
 }
-  
-/* Hide the checkbox */
-#nav-toggle {
-    display: none;
+
+.bottom-line {
+    color: #154229;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-  
-.nav-toggle-label {
-    font-size: 2rem;
+
+.resource {
+    text-decoration: none;
+    color: inherit;
+    font-size: x-small;
+    /* margin-left: 20px; */
+    padding-left: 30px;
 }
 
 /* ***************** */
@@ -193,20 +173,15 @@ h3 {
     height: 80vh;
     margin-left: 10vw;
     margin-right: 10vw;
-    margin-top: 15vh;
+    margin-top: 10vh;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 2px gray;
 }
 
 #question-container {
-    /* background-color: beige; */
     margin: 10px;
 }
-
-/* #quiz-header {
-    font-family:  sans-serif;
-} */
 
 #question {
     /* background-color: bisque; */
@@ -222,7 +197,6 @@ h3 {
 }
 
 #submit-field {
-    /* margin: 20px; */
     text-align: center;
 }
 
@@ -231,7 +205,7 @@ h3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 50px;
+    gap: 40px;
 }
 
 .btn-tell-more {
@@ -241,6 +215,7 @@ h3 {
     padding: 5px;
     border-radius: 5px;
     margin: 10px;
+    width: 100px;
 }
 
 .btn-tell-more:hover {
@@ -333,101 +308,6 @@ h3 {
     margin-top:10px;
 }
 
-/* ====================== */
-/* CSS for subscribe page */
-/* ====================== */
-
-/* CSS used for the subscribe.html page is copied from my portfolio project 1 with slight modifications*/
-
-#subscribe h2 {
-    text-align: left;
-    font-size: 120%;
-}
-
-#subscribe p {
-    margin-bottom: 10px;
-}
-
-#subscribe-form {
-    background-color: rgba(223, 219, 219, 0.862);
-    padding: 50px;
-    width: 360px;
-    margin: 100px auto;
-    border-radius: 10px;
-}
-
-.personal-detail {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-input[type=text],
-input[type=email] {
-    height: 30px;
-    width: 50%;
-    padding-left: 10px;
-    margin: 10px 0;
-}
-
-.block-label {
-    display: block;
-}
-
-select {
-    height: 30px;
-    width: 100px;
-    padding-left: 10px;
-    margin-bottom: 30px;
-}
-
-#feedback {
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-.checkbox-margin label {
-    margin-left: 5px;
-    margin-right: 30px;
-}
-
-.confirm {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-}
-
-input[type=submit] {
-    margin-top: 40px;
-    margin-left: 0.75rem;
-    padding: 0.75rem;
-    background-color: #21643E;
-    color: white;
-    border: solid 1px #3a3a3a;
-    border-radius: 5px;
-    width: 100px;
-    font-size: medium;
-}
-
-input[type=reset] {
-    margin-top: 40px;
-    margin-left: 0.75rem;
-    padding: 0.75rem;
-    background-color: white;
-    color: #21643E;
-    border: solid 1px #3a3a3a;
-    border-radius: 5px;
-    font-size: medium;
-}
-
-.thanks {
-    display: flex;
-    justify-content: center;
-    margin-top: 10%;
-    font-size: 150%;
-}
 
 /* The idea for the information-container class is from the modal page tutorial on the following site
 https://www.w3schools.com/howto/howto_css_modals.asp 
@@ -512,40 +392,18 @@ https://www.w3schools.com/howto/howto_css_modals.asp
         font-weight: bold;
         padding-top: 10px;
       }
-    /* Header */
-    nav {
-        display: block;
-        position: absolute;
-        box-shadow: none;
-        width: fit-content;
-        padding-right: 1rem;
-        width: 100%;
-    }
-  
-    #menu {
-        display: flex;
-        padding-top: 20px;
-    }
-  
-    #menu>li {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        font-size: 95%;
-    }
-  
-    /* Below is copied from CI love-running walkthrough example */
-    .nav-toggle-label {
-        display: none;
-    }
   
     /* CSS for quiz page */
 
     #quiz-container {
-        margin-top: 20vh;
+        margin: 15vh auto;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 2px 2px 2px gray;
+        width: 60vw;
+        height: 70vh;
     }
+
     /* Subscribe page */
     #subscribe-form {
         width: 700px;
@@ -562,7 +420,22 @@ https://www.w3schools.com/howto/howto_css_modals.asp
         font-size: medium; 
     }
 
-
+    .bottom-line {
+        margin-top: -70px;
+        margin-bottom: 20px;
+    }
+    
+    .resource {
+        text-decoration: none;
+        color: inherit;
+        font-size: x-small;
+        /* margin-left: 20px; */
+        padding-left: 60px;
+    }
+    
+    .resource-big {
+       margin-top: -100px
+    }
 
 /* ======================================= */
 /* Media query: laptops (992px and higher) */
@@ -584,11 +457,6 @@ https://www.w3schools.com/howto/howto_css_modals.asp
     #menu a:hover {
         color: seagreen;
     }
-  
-    /* Subscribe page */
-    #subscribe-form {
-        margin: 200px auto;
-    }
 
     #modal-information {
         max-width: 900px;
@@ -600,18 +468,24 @@ https://www.w3schools.com/howto/howto_css_modals.asp
 
     #index-main {
     margin-top: 60px;
+    flex: 1 0 auto;
     /* background-color: #3a3a3a; */
     }
-
+    
     #login-container {
     width: 60%;
     margin: 50px auto;
   }
 
-#create-username, #start-quiz {
-    font-size: medium;
-    padding: 7px;    
-    margin: 20px 60px;
-    font-family: lexend, sans-serif;
-    letter-spacing: 1px;
-}
+    #create-username, #start-quiz {
+        font-size: medium;
+        padding: 7px;    
+        margin: 20px 60px;
+        font-family: lexend, sans-serif;
+        letter-spacing: 1px;
+    }
+
+    footer div {
+        color: #154229;
+        margin-right: 60px;
+    }
