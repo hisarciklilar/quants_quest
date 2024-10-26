@@ -6,12 +6,6 @@
 /* Font style classes copied from google-fonts */
 /* =========================================== */
 
-.rock-salt-regular {
-    font-family: "Rock Salt", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
 .lexend-light {
     font-family: "Lexend", sans-serif;
     font-optical-sizing: auto;
@@ -123,7 +117,6 @@ h3 {
     border: solid #3a3a3a 5px;
 }
 
-
 #button-container {
     display: flex;
     flex-direction: row;  
@@ -142,16 +135,18 @@ h3 {
 }
 
 #start-quiz {
-    border: 1px solid black;
-}
-
-#start-quiz {
     text-decoration: none;
     color: white;
     text-align: center;
+    border: 1px solid black;
 }
 
 #start-quiz:hover {
+    background-color: white;
+    color: #3a3a3a;
+}
+
+#create-username:hover {
     background-color: white;
     color: #3a3a3a;
 }
@@ -180,6 +175,58 @@ footer div {
     padding-left: 30px;
     margin-top: -50px;
 }
+
+/********************************/
+/* CSS for create username page */
+/********************************/
+
+#username-form {
+    background-color: white;
+    padding: 50px;
+    width: 360px;
+    margin: 25px auto;
+    border-radius: 10px;
+    font-family: lexend, sans-serif;
+  }
+  
+  .user-detail {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input[type=text],
+  input[type=email] {
+    height: 30px;
+    width:80%;
+    padding-left: 10px;
+    margin: 10px 0;
+  }
+  
+  input[type=submit] {
+    margin-top: 40px;
+    margin-left: 0.75rem;
+    padding: 0.75rem;
+    background-color: #1959cf;
+    color: white;
+    border: solid 1px #1959cf;
+    border-radius: 5px;
+    width: 100px;
+    font-size: medium;
+  }
+  
+  input[type=reset] {
+    margin-top: 40px;
+    margin-left: 0.75rem;
+    padding: 0.75rem;
+    background-color: white;
+    color: #1959cf;
+    border: solid 1px #1959cf;
+    border-radius: 5px;
+    font-size: medium;
+    margin-left: 50px;
+  }
 
 /* ***************** */
 /* CSS for quiz page */
