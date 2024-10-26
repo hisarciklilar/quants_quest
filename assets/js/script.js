@@ -98,6 +98,7 @@ displayQuestion();
 // }
 
 function displayQuestion() {
+    document.getElementById("feedback").style.display = "none";
     let questionIndex = parseInt(document.getElementById("question-number").innerText);
     let questionNumber = questionIndex + 1;
     // Information to be provided as feedback (hidden until the user requests for it)
@@ -161,6 +162,7 @@ function checkAnswer(){
 }
 
 function displayPositiveFeedback(){
+document.getElementById('feedback').style.display = "block";
 let html = 
 ` <h2> <i class="fa-regular fa-circle-check positive"></i> </h2>
 <div class="feedback positive green-border"> Well done! Your answer is correct. </div>
@@ -169,6 +171,7 @@ document.getElementById("feedback").innerHTML = html;
 }
 
 function displayNegativeFeedback(){
+    document.getElementById('feedback').style.display = "block";
     let html = 
     ` <h2><i class="fa-regular fa-circle-xmark negative"></i></h2>
     <div class="feedback negative red-border"> Your answer is incorrect. </div>
@@ -193,7 +196,7 @@ function displayEndOfQuiz() {
     let correctScore = parseInt(document.getElementById("correct-score").innerText);
     let incorrectTally = parseInt(document.getElementById("incorrect-tally").innerText);
     let numberOfQuestions = correctScore + incorrectTally;
-    let endOfQuizScoreMessage = `<h3>Out of ${numberOfQuestions} questions, 
+    let endOfQuizScoreMessage = `<h3>Out of ${numberOfQuestions} attempted questions, 
         you answered ${correctScore} correctly.</h3>`;
     document.getElementById("question-container").innerHTML = endOfQuizMessage;
     document.getElementById("feedback-container").innerHTML = endOfQuizScoreMessage;
