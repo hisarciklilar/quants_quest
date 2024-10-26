@@ -7,7 +7,11 @@ The application targets undergraduate students who are about to start the final 
 
 The designer's aim is to test the user's knowledge on the basic concepts of Econometrics and teach them correct applications through an online interactive quiz. This is to ensure that users understand the basics before moving on to more advanced topics. 
 
-## Features
+### Features
+
+### Manual Testing
+
+#### Manual Testing: Quiz Page
 
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
@@ -46,3 +50,12 @@ The designer's aim is to test the user's knowledge on the basic concepts of Econ
 - _Quants Quest_ was suggested by  Microsoft Co-Pilot as the web platform name. 
 - The idea of using "querySelectorAll" method and ".checked" property in the checkAnswer() function code is taken from an example provided in the following page: https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
 - The idea of getting dynamic values (such as question number, latest score, etc) from the webpage elements rather than using global variables in the javascript file is from Code Institute's love-maths walkthrough example. 
+
+### Images
+
+- Alberto Cairo's "Datasaurus Dozen" image is obtained through 
+  
+  Matejka, J. and Fitzmaurice G. (2017). Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing.  Available at <https://www.autodesk.com/research/publications/same-stats-different-graphs> [Accessed 11 January 2022]
+- [tinyjpg](https://tinyjpg.com) platform is used for compressing images for uploads
+  
+- My mentor Matt Bodden's advice over resizing photos resolved issues for the design 

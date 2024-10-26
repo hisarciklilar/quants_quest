@@ -56,12 +56,13 @@ body {
     color: #3a3a3a;
     font-family: lexend, sans-serif;
     /* background-color: rgb(251, 226, 35); */
+    background-color: goldenrod;
 }  
 
 /* Below, I got the idea of a box-shadow from love-running walkthrough, modified the code slightly */
 header {
-    background-color: rgb(251, 226, 35);
-    padding-top: 20px;
+    background-color: goldenrod;
+    padding-top: 10px;
     position: fixed;
     width: 100%;
     box-shadow: 0 4px 3px #3a3a3a;
@@ -102,18 +103,46 @@ h3 {
     padding-top: 10px;
   }
 
-/* In mobile phones, the navbar style will be a dropdown list */
-/* Copied the following code from CI love-running walkthrough example with some modifications */
-/* nav {
-    position: absolute;
-    background-color: gold;
+  #index-main {
+    margin-top: 100px;
+    /* background-color: #3a3a3a; */
+  }
+
+  #login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 5%;
+  }
+
+  #datasaurus {
+    width: 80%;
+    background-color: goldenrod;
+    text-align: center;
+} 
+
+.scatterplot {
     width: 100%;
-    left: 0%;
-    box-shadow: 2px 2px 2px gray;
-    display: none;
-    top: 100%;
-} */
-  
+    object-fit: contain;
+    border: solid #3a3a3a 5px;
+}
+
+#create-username, #start-quiz {
+    background-color: #3a3a3a;
+    color: white;
+    padding: 5px;    
+    margin: 15px;
+    font-family: lexend, sans-serif;
+    letter-spacing: 1px;
+}
+
+#start-quiz a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* ============= */
 /* Header styles */
 /* ============= */
@@ -530,6 +559,8 @@ https://www.w3schools.com/howto/howto_css_modals.asp
         font-size: medium; 
     }
 
+
+
 /* ======================================= */
 /* Media query: laptops (992px and higher) */
 /* ======================================= */
@@ -563,3 +594,21 @@ https://www.w3schools.com/howto/howto_css_modals.asp
     #modal-book {
         max-width: 900px;
     }
+
+    #index-main {
+    margin-top: 60px;
+    /* background-color: #3a3a3a; */
+    }
+
+    #login-container {
+    width: 60%;
+    margin: 50px auto;
+  }
+
+#create-username, #start-quiz {
+    font-size: medium;
+    padding: 7px;    
+    margin: 20px 60px;
+    font-family: lexend, sans-serif;
+    letter-spacing: 1px;
+}
