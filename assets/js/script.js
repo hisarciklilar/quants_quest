@@ -9,7 +9,7 @@ const questions = [
             { text: "No serial correlation", correct: false }
         ],
         feedback: "this is the feedback for question 1", 
-        source: "For more information, see Chapter 5",
+        chapter: "Chapter 1",
     },
     {
         question: "Which regresion model's coefficiens show elasticity without further transformation?",
@@ -20,7 +20,7 @@ const questions = [
             { text: "Log-log", correct: true }
         ],
         feedback: "this is the feedback for question 2",
-        source: "For more information, see Chapter 5",
+        chapter: "Chapter 3",
     },
     {
         question: "Which estimation method relies on minimisation of error sum squared?",
@@ -31,7 +31,7 @@ const questions = [
             { text: "Generalised Method of Moments", correct: false }
         ],
         feedback: "this is the feedback for question 3",
-        source: "For more information, see Chapter 5",
+        chapter: "Chapter 5",
     },
     {
         question: "Which is not a cause of endogeneity?",
@@ -42,7 +42,7 @@ const questions = [
             { text: "Simultaneity", correct: false }
         ],
         feedback: "this is the feedback for question 4",
-        source: "For more information, see Chapter 5",
+        chapter: "Chapter 5",
     }
 ];
 
@@ -69,6 +69,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     // alert("end of game!");
                     displayEndOfQuiz();
                 }
+            } else if (button.getAttribute("id") === "btn-close") {
+                closeInformation();
             } else {
                 provideInformation();
             }
@@ -94,10 +96,12 @@ displayQuestion();
 //     this.style.border = "2px solid red"
 // }
 
-
 function displayQuestion() {
     let questionIndex = parseInt(document.getElementById("question-number").innerText);
     let questionNumber = questionIndex + 1;
+    // Information to be provided as feedback (hidden until the user requests for it)
+    displayInformation(questionIndex);
+    displayBookChapter(questionIndex);
     document.getElementById("question-number").textContent = questionNumber;
     document.getElementById("question").textContent = questions[questionIndex].question;
     // display options of the question
@@ -105,12 +109,23 @@ function displayQuestion() {
         let option=document.getElementsByClassName("option")[i];
         option.textContent = questions[questionIndex].answers[i].text;
         option.style.cursor = "pointer";
-        option.addEventListener('click', function(){
+        option.addEventListener("click", function(){
             document.getElementById(`option-${i}`).checked = true;
             // this.style.color = "blue"
         })
         };
     }
+
+function displayInformation(index) {
+    // let questionIndex = parseInt(document.getElementById("question-number").innerText);
+    document.getElementById("modal-information").textContent = questions[index].feedback;
+}
+
+function displayBookChapter(index) {
+    // let questionIndex = parseInt(document.getElementById("question-number").innerText);
+    document.getElementById("book-chapter").textContent = questions[index].chapter;
+}
+
 
 // The idea of using "querySelectorAll" method and ".checked" property in the code below
 // is taken from an example provided in the following page:
@@ -156,7 +171,6 @@ function displayNegativeFeedback(){
     document.getElementById("feedback").innerHTML = html;
     }
     
-
 function calculateCorrectTally() {
     let correctScore = parseInt(document.getElementById("correct-score").innerText);
     correctScore++;
@@ -181,15 +195,21 @@ function displayEndOfQuiz() {
 }
 
 function provideInformation() {
-   let html=
-    `   <div class="modal-feedback">
-            this is the feedback on your question. The assumptions of ordinary leadast squares.... 
-        </div>
-        <div class="modal-book">
-            <p>For more information, see Chapter 5</p>
-            <p> Gujarati, D. (2015) Econometrics by Example, 2nd ed. Red Globe Press.</p>
-            <div class="modal-close"><button class="btn-close">Close</button></div>
-        </div>
-        `
-    document.getElementById("information").innerHTML = html;
+    document.getElementById("information-container").style.display = "block";
+    document.getElementById("question-container").style.display = "none";
 }
+
+// function closeInformation(){
+//     alert("hello");
+// }
+
+function closeInformation() {
+    document.getElementById("information-container").style.display = "none";
+    document.getElementById("question-container").style.display = "block";
+
+}
+// document.getElementById("btn-close").addEventListener("click", function() {
+//     document.getElementById("information-container").style.color = "red";
+//     // document.getElementById("question-container").style.display = "block";
+// }) 
+

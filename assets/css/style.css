@@ -233,6 +233,7 @@ nav {
 
 .btn-next {
     width: 60px;
+    letter-spacing: 1px;
 }
 
 #feedback-container {
@@ -403,7 +404,7 @@ https://www.w3schools.com/howto/howto_css_modals.asp
     display: none;
 }
 
-.modal-information {
+#modal-information {
     background-color: white;
     width: 100%;
     margin: 2% auto;
@@ -414,7 +415,7 @@ https://www.w3schools.com/howto/howto_css_modals.asp
     font-size: small;
 }
 
-.modal-book {
+#modal-book {
     background-color: white;
     width: 100%;
     margin: 2% auto;
@@ -427,17 +428,17 @@ https://www.w3schools.com/howto/howto_css_modals.asp
     font-size: small; 
 }
 
-.modal-close {
+#modal-close {
     text-align: center;
     margin-top: 30px;
 }
 
-.modal-book p {
+#modal-book p {
     margin-top:7px;
     text-align: center;
 }
 
-.btn-close {
+#btn-close {
     padding: 5px;
     background-color: #1959cf;
     color: white;
@@ -446,26 +447,12 @@ https://www.w3schools.com/howto/howto_css_modals.asp
     border-radius: 5px;
 }
 
-.btn-close:hover {
+#btn-close:hover {
     background-color: white;
     color: #1959cf;
     border: 1px solid #1959cf;
 }
 
-  /* The Close Button */
-  .close {
-    color: seagreen;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
 
 /* ================================================== */
 /* Media query: tablets and larger (768px and higher) */
@@ -532,12 +519,12 @@ https://www.w3schools.com/howto/howto_css_modals.asp
         margin: 150px auto;
     }
 
-    .modal-information {
+    #modal-information {
         max-width: 700px;
         font-size: medium;
     }
     
-    .modal-book {
+    #modal-book {
         max-width: 700px;
         font-size: medium; 
     }
@@ -568,10 +555,10 @@ https://www.w3schools.com/howto/howto_css_modals.asp
         margin: 200px auto;
     }
 
-    .modal-information {
+    #modal-information {
         max-width: 900px;
     }
     
-    .modal-book {
+    #modal-book {
         max-width: 900px;
     }
