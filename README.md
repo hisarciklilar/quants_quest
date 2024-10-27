@@ -55,8 +55,13 @@ The pages and functionality are tested on the following platforms:
 ## Credits
 
 - _Quants Quest_ was suggested by  Microsoft Co-Pilot as the web platform name. 
+- eventListeners are added using the logic provided in love-maths walkthrough example.
 - The idea of using "querySelectorAll" method and ".checked" property in the checkAnswer() function code is taken from an example provided in the following page: https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
 - The idea of getting dynamic values (such as question number, latest score, etc) from the webpage elements rather than using global variables in the javascript file is from Code Institute's love-maths walkthrough example. 
+- The idea of using localStorage was based on a discussion that I had with my mentor (Matt Bodden) during our second meeting for this project 
+- The code I used for localStorage is written using a few sources:
+  - The information and examples provided on https://www.w3schools.com/html/html5_webstorage.asp, and 
+  - using examples from "Getting Form Values" and "Form Submission" modules on Code Institute learning pages.
 
 ### Images
 
