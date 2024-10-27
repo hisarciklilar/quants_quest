@@ -19,34 +19,34 @@ function startUsernameForm() {
     let html = 
     `
     <form id="username-form">
-      <h2>Create User Name</h2>
-          <!-- Adding text fields -->
-          <div class="user-detail">
-            <div>
-              <label for="username-1">Create username of minimum 8 and maximum 10 characters </label>
-              <input
-                id="username-1"
-                type="text"
-                name="username-1"
-                placeholder="Username"
-                required
-                class="block-label"
-                aria-labelledby="username"
-              >
+        <h2>Create User Name</h2>
+            <!-- Adding text fields -->
+            <div class="user-detail">
+              <div>
+                  <label for="username-1">Create username of minimum 8 and maximum 10 characters </label>
+                  <input
+                    id="username-1"
+                    type="text"
+                    name="username-1"
+                    placeholder="Username"
+                    required
+                    class="block-label"
+                    aria-labelledby="username"
+                  >
+              </div>
+              <div>
+                  <label for="username-2">Re-type your username</label>
+                  <input
+                    id="username-2"
+                    type="text"
+                    name="username-2"
+                    placeholder="Re-type username"
+                    required
+                    class="block-label"
+                    aria-labelledby="username"
+                  >
+              </div>
             </div>
-            <div>
-              <label for="username-2">Re-type your username</label>
-              <input
-                id="username-2"
-                type="text"
-                name="username-2"
-                placeholder="Re-type username"
-                required
-                class="block-label"
-                aria-labelledby="username"
-              >
-            </div>
-          </div>
 
           <div>
             <button type="submit" id="create">Create</submit>
@@ -80,7 +80,7 @@ function submitHandle(event) {
     localStorage.setItem("username", usernameOne);
     if (usernameOne === usernameTwo) {
         validateLength(usernameOne);
-     } else {
+    } else {
         alert("Usernames do not match! Please try again.");
         startUsernameForm();
     }
