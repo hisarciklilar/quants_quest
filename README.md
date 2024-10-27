@@ -1,13 +1,89 @@
+---
+title: "Quants Quest"
+author: Mehtap Hisarciklilar 
+date: October, 2024
+---
+
+
+![](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+
 # Quants Quest
 
-
-__Quants Quest__ is a web application designed for learners of Econometrics at  beginner level. It tests the knowledge of users for the basic but most crucial concepts in Econometrics. 
+__Quants Quest__ is a web application designed for learners of Econometrics at  the beginner to intermediate level. By the use of a multiple choice quiz, it tests the knowledge of users for the basic but most crucial concepts in Econometrics. 
 
 The application targets undergraduate students who are about to start the final year of their degree, although the usage is open to anybody who might be interested with quantitative analysis. 
 
-The designer's aim is to test the user's knowledge on the basic concepts of Econometrics and teach them correct applications through an online interactive quiz. This is to ensure that users understand the basics before moving on to more advanced topics. 
+The designer's aim is to test the user's knowledge on the basic concepts of Econometrics and teach them correct applications through an online interactive quiz while encouraging them to read further on the topic. This is to ensure that users understand the basics before moving on to more advanced topics in their final year. 
 
+An interactive multiple choice quiz is used with an intention of breaking the anxiety around the learning and application of Econometric methods.
+
+![](./assets/images/readme-images/Responsiveness-Index.png)
+
+![](./assets/images/readme-images/Responsiveness-Quiz.png)
+
+_Note_: Above images are obtained through http://ami.responsivedesign.is/
+
+## User Experience
+
+The target audience for this website are UG students of social sciences, who are half-way through their degree. 
+
+### User Stories
+
+Users of this web application expect the following: 
+
+- Navigate around the site easily without frustration.
+- Easily read and understand  the information provided in the pages. 
+- Can see and assess their own performance and knowledge of Econometrics.
+- Can easily find further information on the topic.
+- Can easily find further information on the sources to check for further reading and practice. 
+- Have an understanding of which topics gain priority for revision.
+   
+### Site Owner's Goals
+
+I aim to break the anxiety around learning and application of econometrics by 
+
+- creating a warm, welcoming page 
+- help users practice what they learnt and learn new concepts through a quiz by 
+  - selection of concepts and topics used in quiz questions 
+  - providing further information on these
+  - providing direction for further reading
+ 
 ### Features
+
+#### Design
+
+- A minimalist design is adopted to help users focus on the quiz and not get distracted by other elements on page. 
+
+- Special care is taken to make the navigation as easy for the users as possible. 
+
+
+#### Color Scheme
+
+The background color chosen for this web application is goldenrod and white for the following reasons:
+
+- Both these colors are not tiring the eye during longer durations of page use; 
+  - white forms a good contrast with black and gray tones
+  - white space in quiz space allows users to concentrate on question
+  - the yellow color is intended to create warm and positive feelings on the user while a slightly darker tone avoid the discomfort of brightness.
+- Elements that relate to correct answers are provided in green, while elements that relate to incorrect answers are provided in red. For example, the feedback messages, and the score board. 
+- Neutral elements are mainly provided in blue, except for the "tell me more" button, which is coral to differentiate it from the other buttons. 
+ 
+#### Fonts
+
+The following fonts are used:  
+
+- "Lexend" for the body and footer text. "Lexend" is chosen for the main text because a small scale study has shown that people can read and understand more easily when this font style is used.  
+
+- "Rock Salt" is used for heading level 1. It looks dynamic, matching the attributes of a quiz.
+
+### Wireframes
+
+I mostly worked on hand-written wireframes as it was easier to draw quickly. A few screenshots are presented below. These were used during the initial stages of idea generation. 
+
+| ![](./assets/images/readme-images/wireframe-1c.png) | ![](./assets/images/readme-images/wireframe-2c.png) |
+
+| ![](./assets/images/readme-images/wireframe-3c.png) | ![](./assets/images/readme-images/wireframe-4c.png) |
+
 
 ### Manual Testing
 
@@ -51,7 +127,11 @@ The pages and functionality are tested on the following platforms:
 
 ## Future Additions
 - A visual progress bar at the bottom of the question area
-  
+- A more informative message at the end of the quiz, evaluating the performance of the users (possibly through an if condition where the number of correct answers are related to different levels of performance (poor, medium, high, etc)).
+- Addition of new sets of questions by topic. 
+- Students to be given the ability to choose which topic to practice. 
+- Random question reveal from a bigger pool of questions so that users can repeatedly take the quiz but not face the same set of questions every time.   
+
 ## Credits
 
 - _Quants Quest_ was suggested by  Microsoft Co-Pilot as the web platform name. 
