@@ -215,7 +215,7 @@ function displayEndOfQuiz() {
     let correctScore = parseInt(document.getElementById("correct-score").innerText);
     let incorrectTally = parseInt(document.getElementById("incorrect-tally").innerText);
     let numberOfQuestions = correctScore + incorrectTally;
-    let endOfQuizScoreMessage = `<h3>Out of ${numberOfQuestions} attempted questions, 
+    let endOfQuizScoreMessage = `<h3 class="score-message">Out of ${numberOfQuestions} attempted questions, 
         you answered ${correctScore} correctly.</h3>`;
     document.getElementById("question-container").innerHTML = endOfQuizMessage;
     document.getElementById("feedback-container").innerHTML = endOfQuizScoreMessage;

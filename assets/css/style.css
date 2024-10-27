@@ -456,6 +456,10 @@ https://www.w3schools.com/howto/howto_css_modals.asp
     margin: 30% auto;
 }
 
+.score-message {
+    margin-bottom: 100px;    
+}
+
 /* ================================================== */
 /* Media query: tablets and larger (768px and higher) */
 /* ================================================== */
@@ -533,6 +537,11 @@ https://www.w3schools.com/howto/howto_css_modals.asp
     margin: 20% auto;
 }
 
+.score-message {
+    margin-bottom: 70px;    
+}
+
+
 /* ======================================= */
 /* Media query: laptops (992px and higher) */
 /* ======================================= */
@@ -599,4 +608,9 @@ https://www.w3schools.com/howto/howto_css_modals.asp
     .end-of-quiz-message {
         margin: 10% auto;
     }
+
+    .score-message {
+        margin-bottom: 50px;    
+    }
+
 }
