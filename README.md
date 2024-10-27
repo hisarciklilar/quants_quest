@@ -283,7 +283,16 @@ The pages and functionality are tested on the following platforms:
 
 - The following issue is encountered for the "create username" and "start the quiz" links on the landing page: 
   - The links work in all platforms tested, except Chromium Version 130.0.6723.58 running on Debian GNU/Linux 12 (bookworm).
-  
+
+#### Manual Testing: Index Page
+
+| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
+| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+| "Create username" button | Replace the main body with a small form asking user to create a username | Clicked on the button | Replaced the main body with the username create form | Pass |
+| "Create" button | (a) Checks the validity of the username by comparing the values in two input fields; (b) alerts an error message if the two inputs do not match; (c) checks the validity of the username in terms of length (see row below) and then shows a confirmation message to user if the two inputs match with the correct length | (1) entered matching usernames in the input fields; (2) entered non-matching usernames in the input fields | (1) Receive an alert warning about validity of username inputs when the entries were different; (2) The form in main body is replaced with a text confirming username when the username entries match (and if they have between 8 to 10 characters). It also provides a working link to the start of the quiz page. |   Pass |
+| "Create" button | Once the equality of two username values is confirmed (see previous row), a check on the length of the username is performed. User receives an alert if the username is shorter than 8 and longer than 10 characters. Confirmation of username replaces the main body if validity is confirmed. | Entered matching usernames that were (1) between 8 to 10 characters long; (2) shorter than 8 characters; and (3) longer than 10 characters | (1) Confirmation of username replaces the main body when the username has the correct length; (2 & 3) Receive an alert when the username is either too short or too long;  | Pass |
+| "Start the quiz" button | Calls the quiz page, which reveals the first question and its options. | Clicked the "start the quiz button"  | Index page is replaced by the quiz page | Pass |
+
 #### Manual Testing: Quiz Page
 
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
@@ -300,19 +309,7 @@ The pages and functionality are tested on the following platforms:
 | "Next" button" | (1) If not at the end of quiz: New question & options displayed to user and the "submit" button is visible again (2) If at the end of quiz: end of quiz message with the final score is displayed to user while hiding all buttons (i.e. "submit", "tell me more", "next") | Moved on to the end of quiz by clicking next and checked if the message appears after last question | End of quiz message and the final scores are displayed to user while hiding the "submit", "tell me more", "next" buttons   | Pass |
 | "Next" button : Hide positive/negative feedback on the last attempted question | The positive/negative feedback provided for the last attempted question disappears from page once user clicks "next" to work on the next question | On submission of an answer to a question, clicked on the "next" button (1) after using the "tell me more" button; (2) without using the "tell me more" button and checked if the feedback is hidden | Positive/negative feedback on last attempted question disappears from the user's sight on click to "next" button | Pass |
 | Score calculations | (1) Correct and incorrect answer tally provided at the bottom of the page throughout the quiz; (2) Correct number of attempted questions and number of correct answers are calculated and provided to user in the end-of-quiz message    | Selected different combinations of correct and incorrect answers and checked the score calculations throughout. Also did this while skipping some questions. | Correct numbers of (i) correct answer tally; (2) incorrect answer tally; (3) total number of attempted questions are calculated and reported in relevant places.  | Pass |
-
-
-
-| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
-
-
-| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
-
-
-| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
-
-
-| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+Link on the header of the page | Replaces the quiz.html with the landing (index) page by calling the index.html file | Clicked on the "Quants Quest" header | Main body of the quiz is replaced by the index.html file|Pass|
 
 ### Unfixed Bugs
 
