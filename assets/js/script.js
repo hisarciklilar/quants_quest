@@ -8,30 +8,30 @@ const questions = [
             { text: "Homoscedasticity", correct: false },
             { text: "No serial correlation", correct: false }
         ],
-        feedback: "this is the feedback for question 1", 
+        feedback: "OLS coefficients are obtained by minimising the error sum of squares. This is a methodological approach, not an assumption. The other options are assumptions of OLS.", 
         chapter: "Chapter 1",
     },
     {
-        question: "Which regresion model's coefficiens show elasticity without further transformation?",
+        question: "Which regression model's coefficients show elasticity without further transformation?",
         answers: [
             { text: "log-lin", correct: false },
             { text: "lin-log", correct: false },
             { text: "lin-lin", correct: false },
             { text: "Log-log", correct: true }
         ],
-        feedback: "this is the feedback for question 2",
-        chapter: "Chapter 3",
+        feedback: "The coefficient estimates of a log-log model directly measures the elasticity of the dependent variable with respect to the independent variable. although we may be able to obtain elasticities using other functional forms, they require further calculations.",
+        chapter: "Chapter 2",
     },
     {
         question: "Which estimation method relies on minimisation of error sum squared?",
         answers: [
             { text: "Ordinary Least Squares", correct: true },
             { text: "Akaike Information Criterion", correct: false },
-            { text: "Maximuum Likelihood Estimation", correct: false },
+            { text: "Maximum Likelihood Estimation", correct: false },
             { text: "Generalised Method of Moments", correct: false }
         ],
-        feedback: "this is the feedback for question 3",
-        chapter: "Chapter 5",
+        feedback: "OLS estiamtes are obtained by minimising error sum of squares. AIC is not an estimation approach but a criteria we use in model selection. ML estimation requires using sample log-likelihood functions. GMM uses moment conditions to get the estimates.",
+        chapter: "Chapters 1, 6, and 11",
     },
     {
         question: "Which is not a cause of endogeneity?",
@@ -41,8 +41,8 @@ const questions = [
             { text: "Reverse causality", correct: false },
             { text: "Simultaneity", correct: false }
         ],
-        feedback: "this is the feedback for question 4",
-        chapter: "Chapter 5",
+        feedback: "Existence of serial correlation (between error terms) is not a cause of endogeneity but a violation of one of the assumptions of OLS.",
+        chapter: "Chapters 6 and 7",
     }
 ];
 
