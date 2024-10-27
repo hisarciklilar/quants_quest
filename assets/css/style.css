@@ -514,6 +514,15 @@ https://www.w3schools.com/howto/howto_css_modals.asp
     .resource-big {
        margin-top: -80px;
     }
+
+    .btn {
+        font-size: medium;
+    }
+
+    .btn-tell-more {
+        font-size: medium;
+        width: auto;
+    }
 }
 
 /* ======================================= */
