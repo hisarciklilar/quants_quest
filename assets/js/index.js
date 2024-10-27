@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
-})
+});
 
 /**
  * Calls the form for username creation and inserts an eventListener for submission
@@ -52,7 +52,7 @@ function startUsernameForm() {
             <button type="submit" id="create">Create</submit>
           </div>
         </form>
-    `
+    `;
     document.getElementById("login-container").innerHTML = html;   
     document.getElementById('username-form').addEventListener('submit', submitHandle);
 }
@@ -84,7 +84,7 @@ function submitHandle(event) {
         alert("Usernames do not match! Please try again.");
         startUsernameForm();
     }
-};
+}
 
 /**
  * This function checks the length of the username given by the user and
@@ -110,7 +110,7 @@ function saveUsername(usernameOne) {
         <div id="message"> Username "${usernameOne}" saved! Thank you! </div>
         <a href="quiz.html" id="start-quiz-now"> <div>Start the quiz!</div></a>
         `;
-        document.getElementById("login-container").style.backgroundColor = "white"
+        document.getElementById("login-container").style.backgroundColor = "white";
         document.getElementById("login-container").style.border = "5px solid #3a3a3a";
         document.getElementById("login-container").style.borderRadius = "10px";
         document.getElementById("login-container").innerHTML = html;

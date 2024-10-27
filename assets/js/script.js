@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }); // close of button event listener
     } // close of loop across buttons
-}) // close of load page listener
+}); // close of load page listener
 
 // First question is displayed once the page loads
 displayQuestion();
@@ -101,8 +101,8 @@ function displayQuestion() {
         option.style.cursor = "pointer";
         option.addEventListener("click", function(){
             document.getElementById(`option-${i}`).checked = true;
-        })
-        };
+        });
+        }
     document.getElementById("submit").style.display = "inline";
     }
 
@@ -143,7 +143,7 @@ function deactivateSubmit() {
 function checkAnswer(){
     let questionNumber = parseInt(document.getElementById("question-number").innerText);
     let questionIndex = questionNumber - 1;
-    let optionNumber=0
+    let optionNumber=0;
     let questionOptions = document.querySelectorAll('input[name="option"]');
     for (let questionOption of questionOptions) {
         if (questionOption.checked) {
@@ -159,7 +159,7 @@ function checkAnswer(){
             }
             break;
         } else {
-            optionNumber++
+            optionNumber++;
         }
     } 
 }
@@ -172,7 +172,7 @@ document.getElementById('feedback').style.display = "block";
 let html = 
 ` <h2> <i class="fa-regular fa-circle-check positive"></i> </h2>
 <div class="feedback positive green-border"> Well done! Your answer is correct. </div>
-`
+`;
 document.getElementById("feedback").innerHTML = html;
 }
 
@@ -184,7 +184,7 @@ function displayNegativeFeedback(){
     let html = 
     ` <h2><i class="fa-regular fa-circle-xmark negative"></i></h2>
     <div class="feedback negative red-border"> Your answer is incorrect. </div>
-    `
+    `;
     document.getElementById("feedback").innerHTML = html;
     }
 
@@ -240,5 +240,3 @@ function closeInformation() {
     document.getElementById("question-container").style.display = "block";
     document.getElementById("info").style.display = "block";
 }
-
-

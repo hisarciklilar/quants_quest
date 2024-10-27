@@ -76,14 +76,138 @@ The following fonts are used:
 
 - "Rock Salt" is used for heading level 1. It looks dynamic, matching the attributes of a quiz.
 
+<div style="text-align: center;">
+
+![](./assets/images/readme-images/header.png "header font")
+
+</div>
+
+#### Link on header 
+
+The header has a link on it that takes the user to the start page (index.html).
+
+#### Favicon
+
+- The normal distribution is chosen as the favicon for this website due to 
+  - it being the most widely used distribution in econometrics, and 
+  - its simplicity, allowing for an easy recognition even when it is tiny. 
+
+- The area under the normal distribution curve is shaded in red to introduce a greater contrast with the white background.
+
+<div style="text-align: center;">
+
+![](./assets/images/readme-images/favicon.png)
+
+</div>
+
+#### Landing page image
+
+The image used in the landing page is a combination of scatterplots, referred to as Alberto Cairo's "Datasaurus Dozen". This was inspired by Anscombe's quartet, which was constructed in 1973 to show the importance of data visualisation. Data for all scatter plots, including the dinosaur, come from datasets that share the same descriptive summary statistics, yet demosntrate very different patterns. 
+
+It is used here for users to have a better understanding of the importance of data visualisation.      
+
+<div style="text-align: center;">
+
+![](./assets/images/readme-images/AllDinosGrey.jpg)
+
+</div>
+
+#### Buttons
+
+- Buttons used throughout the application change color when user hovers over them. This ensures the user that they are clicking on the correct spot. 
+
+#### Create Username
+
+- The "create username" button on the landing page replaces the current window with a small form. 
+- Users are asked to type their user names twice. this double-entry is used to check the validity and ensure that there no unintentional typos.
+- Users are required to choose a username that is 8 to 10 characters long. This is also checked and validated in the code. 
+- Users receive an alert on their screen when 
+  - the two usernames they typed do not match
+  - when the user name they chose is either less than 8 or more than 10 characters long. 
+
+<div style="text-align: center;">
+
+![](./assets/images/readme-images/create-username.png)
+
+![](./assets/images/readme-images/username-error.png)
+
+![](./assets/images/readme-images/username-saved.png)
+
+</div>
+
+#### Quiz Page Navigation
+
+Navigation through the quiz pages is guided by 3 buttons: 
+
+- Submit answer
+- Next
+- Tell me more
+
+<div style="text-align: center;">
+
+| ![](./assets/images/readme-images/quiz-page-1.png) | ![](./assets/images/readme-images/quiz-page-2.png) | 
+| ![](./assets/images/readme-images/quiz-page-3.png) | ![](./assets/images/readme-images/quiz-page-4.png) | 
+![](./assets/images/readme-images/quiz-page-5.png)
+
+</div>
+
 ### Wireframes
 
 I mostly worked on hand-written wireframes as it was easier to draw quickly. A few screenshots are presented below. These were used during the initial stages of idea generation. 
 
-| ![](./assets/images/readme-images/wireframe-1c.png) | ![](./assets/images/readme-images/wireframe-2c.png) |
+| ![](./assets/images/readme-images/wireframe-1c.png) | | ![](./assets/images/readme-images/wireframe-2c.png) |
 
-| ![](./assets/images/readme-images/wireframe-3c.png) | ![](./assets/images/readme-images/wireframe-4c.png) |
+| ![](./assets/images/readme-images/wireframe-3c.png) | | ![](./assets/images/readme-images/wireframe-4c.png) |
 
+## Testing
+
+### Validator Testing
+
+#### Testing of HTML Pages
+
+- Testing is done using the [W3C HTML Validator](https://validator.w3.org/nu/)
+- There were no issues in either the index.html or the quiz.html pages. 
+
+<div style="text-align: center;">
+
+![](./assets/images/readme-images/W3C-html-index.png)
+
+![](./assets/images/readme-images/W3C-html-quiz.png)
+
+</div>
+
+#### Testing of the CSS Page
+
+- Testing is done using the [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/)
+- No errors were found. 
+
+<div style="text-align: center;">
+
+![](./assets/images/readme-images/Jigsaw-css.png)
+
+</div>
+
+#### Testing of the js pages
+
+- Testing is done using the [Jshint](https://jshint.com) linter
+
+- No errors were found for the index.js and script.js pages, although there were some warnings about the use of syntax for some browsers.
+
+The metrics are presented below
+
+__Metrics (index.js page)__ 
+
+- There are 6 functions in this file.
+- Function with the largest signature take 1 arguments, while the median is 0.5.
+- Largest function has 9 statements in it, while the median is 4.
+- The most complex function has a cyclomatic complexity value of 2 while the median is 2.
+
+__Metrics (script.js page)__
+
+- There are 15 functions in this file.
+- Function with the largest signature take 1 arguments, while the median is 0.
+- Largest function has 15 statements in it, while the median is 3.
+- The most complex function has a cyclomatic complexity value of 5 while the median is 1.
 
 ### Manual Testing
 
@@ -124,7 +248,10 @@ The pages and functionality are tested on the following platforms:
 
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
 
+## Bugs
 
+- Although the page creates a username and checks its validity for typos and character length, the username cannot be fully utilised in quiz because it is only saved locally. This could be changed by saving user details (as well as their past scores) in a database. 
+ 
 ## Future Additions
 - A visual progress bar at the bottom of the question area
 - A more informative message at the end of the quiz, evaluating the performance of the users (possibly through an if condition where the number of correct answers are related to different levels of performance (poor, medium, high, etc)).
@@ -143,6 +270,7 @@ The pages and functionality are tested on the following platforms:
   - The information and examples provided on https://www.w3schools.com/html/html5_webstorage.asp, and 
   - using examples from "Getting Form Values" and "Form Submission" modules on Code Institute learning pages.
 - In the checkAnswer() function, the idea of using "querySelectorAll" method and ".checked" property is taken from an example provided in the following page: https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
+- The design and logic of the score area is taken from Code Institute's love-maths walkthrough example, although the code used for this area is different than the love-maths example.
 
 ### Images
 

@@ -1,4 +1,4 @@
-/* "Happy Monkey", "Lexend" and "Rock Salt" fonts from Google Fonts */
+/* "Lexend" and "Rock Salt" fonts from Google Fonts */
 /* Rock Salt to be used the header and Lexend for general text */
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Rock+Salt&display=swap');
 
@@ -6,18 +6,11 @@
 /* Font style classes copied from google-fonts */
 /* =========================================== */
 
-.lexend-light {
-    font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-}
 
 .lexend-regular {
-    font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* ============================================ */
@@ -186,7 +179,7 @@ footer div {
     width: 360px;
     margin: 25px auto;
     border-radius: 10px;
-    font-family: lexend, sans-serif;
+    font-family: "lexend", sans-serif;
   }
   
   .user-detail {
@@ -288,7 +281,7 @@ footer div {
 .btn-tell-more {
     background-color: rgb(227, 95, 47);
     color: white;
-    border: 1px solid rgb(227, 95, 47);
+    border: 1px solid rgb(228, 89, 38);
     padding: 5px;
     border-radius: 5px;
     margin: 10px;
@@ -298,6 +291,7 @@ footer div {
 .btn-tell-more:hover {
     background-color: white;
     color: rgb(227, 95, 47);
+    border: rgb(227, 95, 47) ;
 }
 
 .btn {
@@ -478,7 +472,7 @@ https://www.w3schools.com/howto/howto_css_modals.asp
       
     h3 {
         text-align: center;
-        font-family: "Lexend", sans-serif;
+        font-family: "lexend", sans-serif;
         letter-spacing: 2px;
         font-size: 110%;
         font-weight: bold;
@@ -522,7 +516,7 @@ https://www.w3schools.com/howto/howto_css_modals.asp
     .resource-big {
        margin-top: -100px
     }
-
+}
 /* ======================================= */
 /* Media query: laptops (992px and higher) */
 /* ======================================= */
@@ -572,7 +566,7 @@ https://www.w3schools.com/howto/howto_css_modals.asp
         height: 50px;
     }
     
-    footer div {
-        color: #154229;
+    #project-detail-mh {
         margin-right: 60px;
     }
+}
