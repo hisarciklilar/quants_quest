@@ -375,6 +375,20 @@ Users may clone this repository by navigating to "Code" and copying the clone li
 ### Platform Name 
 - _Quants Quest_ was suggested by  Microsoft Co-Pilot as the web platform name. 
 
+### Favicon
+
+- Favicon is created from a png file using  [https://favicon.io/](https://favicon.io/). The picture file used is created by me on my tablet. 
+  
+-  The code on the head of the html files to insert favicon are copied from two sources: 
+  - Love running walkthrough example
+  - [How to Add a Favicon in HTML: Your Easy Step-by-Step Guide](https://www.html-easy.com/learn/how-to-add-a-favicon-in-html/) by Cristian G. Guasch. [Accessed 13 September 2024]  
+  
+### Fonts
+
+- Text-based fonts used in this project are downloaded from [Google Fonts](http://fonts.google.com). 
+
+- The social media and other symbols used on pages are from [Font Awesome](https://fontawesome.com/).
+   
 ### Code
 - eventListeners in Javascript files are added using the logic provided in love-maths walkthrough example.
 - The idea of using "querySelectorAll" method and ".checked" property in the checkAnswer() function code (in script.js file) is taken from an example provided in the following page: https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
@@ -391,3 +405,10 @@ Users may clone this repository by navigating to "Code" and copying the clone li
   
   Matejka, J. and Fitzmaurice G. (2017). Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing.  Available at <https://www.autodesk.com/research/publications/same-stats-different-graphs> [Accessed 11 January 2022]
 - [tinyjpg](https://tinyjpg.com) platform is used for compressing images for uploads
+
+## Acknowledgements
+
+I extend my thanks to my mentor Matt Bodden, for the information and guidance that he provided during our mentoring sessions. My conversations with him helped to shape this web application and more importantly, to resolve some issues that I faced while working on the project. 
+
+I thank my partner Robert Riegler who kept testing the pages as I worked on them using his own gadgets. This allowed me to perform the tests on different brands of electronic gadgets and different operating systems.  
+  
