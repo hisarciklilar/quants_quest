@@ -94,7 +94,7 @@ The header has a link on it that takes the user to the start page (index.html).
 
 - The area under the normal distribution curve is shaded in red to introduce a greater contrast with the white background.
 
-<div style="text-align: center;">
+<div style="text-align: center; width:300px">
 
 ![](./assets/images/readme-images/favicon.png)
 
@@ -102,11 +102,11 @@ The header has a link on it that takes the user to the start page (index.html).
 
 #### Landing page image
 
-The image used in the landing page is a combination of scatterplots, referred to as Alberto Cairo's "Datasaurus Dozen". This was inspired by Anscombe's quartet, which was constructed in 1973 to show the importance of data visualisation. Data for all scatter plots, including the dinosaur, come from datasets that share the same descriptive summary statistics, yet demosntrate very different patterns. 
+The image used in the landing page is a combination of scatterplots, referred to as Alberto Cairo's "Datasaurus Dozen". This was inspired by Anscombe's quartet, which was constructed in 1973 to show the importance of data visualisation. Data for all scatter plots, including the dinosaur, come from datasets that share the same descriptive summary statistics, yet demonstrate very different patterns. 
 
 It is used here for users to have a better understanding of the importance of data visualisation.      
 
-<div style="text-align: center;">
+<div style="width: 500px; text-align: center;">
 
 ![](./assets/images/readme-images/AllDinosGrey.jpg)
 
@@ -125,9 +125,13 @@ It is used here for users to have a better understanding of the importance of da
   - the two usernames they typed do not match
   - when the user name they chose is either less than 8 or more than 10 characters long. 
 
-<div style="text-align: center;">
+<div style="text-align: center; width: 300px;">
 
 ![](./assets/images/readme-images/create-username.png)
+
+</div>
+
+<div style="text-align: center; width: 400px;">
 
 ![](./assets/images/readme-images/username-error.png)
 
@@ -143,10 +147,16 @@ Navigation through the quiz pages is guided by 3 buttons:
 - Next
 - Tell me more
 
-<div style="text-align: center;">
+<div style="text-align: center; width: 400px;">
 
-| ![](./assets/images/readme-images/quiz-page-1.png) | ![](./assets/images/readme-images/quiz-page-2.png) | 
-| ![](./assets/images/readme-images/quiz-page-3.png) | ![](./assets/images/readme-images/quiz-page-4.png) | 
+ ![](./assets/images/readme-images/quiz-page-1.png) 
+
+ ![](./assets/images/readme-images/quiz-page-2.png) 
+
+![](./assets/images/readme-images/quiz-page-3.png) 
+
+![](./assets/images/readme-images/quiz-page-4.png) 
+
 ![](./assets/images/readme-images/quiz-page-5.png)
 
 </div>
@@ -155,9 +165,19 @@ Navigation through the quiz pages is guided by 3 buttons:
 
 I mostly worked on hand-written wireframes as it was easier to draw quickly. A few screenshots are presented below. These were used during the initial stages of idea generation. 
 
-| ![](./assets/images/readme-images/wireframe-1c.png) | | ![](./assets/images/readme-images/wireframe-2c.png) |
+<div style="text-align: center; width: 400px;">
 
-| ![](./assets/images/readme-images/wireframe-3c.png) | | ![](./assets/images/readme-images/wireframe-4c.png) |
+![](./assets/images/readme-images/wireframe-1c.png) 
+ 
+![](./assets/images/readme-images/wireframe-2c.png) 
+
+![](./assets/images/readme-images/wireframe-3c.png) 
+ 
+![](./assets/images/readme-images/wireframe-4c.png) 
+
+
+</div>
+
 
 ## Testing
 
@@ -213,11 +233,27 @@ __Metrics (script.js page)__
 
 The pages and functionality are tested on the following platforms: 
 
-- Debian 
-- Mac OS 24-inch Safari & Google Chrome
-- iPhone 15
-- iPad  
+- OS:
+  - Debian GNU/Linux 12 (bookworm):
+    - Mozilla Firefox 128.3.1esr (64-bit)
+    - Chromium Version 130.0.6723.58 
+    - Konqueror Version 22.12.3
+  - macOS Sequoia:
+    - Google Chrome Version 129.0.6668.101 (Official Build) (arm64)
+    - Safari Version 18.0.1 (20619.1.26.31.7)  
 
+- Android 14
+  - Mozilla Firefox 131.0.3
+  - Google Chrome 130.0.6723.73
+
+- iOS 17.6.1 
+  - Safari
+- iPadOS 17.6.1
+  - Safari
+
+- The following issue is encountered for the "create username" and "start the quiz" links on the landing page: 
+  - The links work in all platforms tested, except Chromium Version 130.0.6723.58 running on Debian GNU/Linux 12 (bookworm).
+  
 #### Manual Testing: Quiz Page
 
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
@@ -248,7 +284,7 @@ The pages and functionality are tested on the following platforms:
 
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
 
-## Bugs
+### Unfixed Bugs
 
 - Although the page creates a username and checks its validity for typos and character length, the username cannot be fully utilised in quiz because it is only saved locally. This could be changed by saving user details (as well as their past scores) in a database. 
  
@@ -258,19 +294,66 @@ The pages and functionality are tested on the following platforms:
 - Addition of new sets of questions by topic. 
 - Students to be given the ability to choose which topic to practice. 
 - Random question reveal from a bigger pool of questions so that users can repeatedly take the quiz but not face the same set of questions every time.   
+- Merging the index.js and quiz.js files under one Javascript file. 
+
+## Deployment
+
+The site was deployed to GitHub pages. The steps followed to deploy are as follows:
+- In the GitHub repository, go to the Settings tab
+- Under "Code and automation", select "Pages" and choose "main" as the default branch
+- Once the main branch is selected, the deployment will take place automatically. This may take a few minutes. 
+- At the top of the refreshed page, one can find the link to the deployed page. 
+- The live link for this project can be found here: 
+   https://hisarciklilar.github.io/quants_quest/index.html
+
+The screenshots below show the stages described above: 
+
+<div style="text-align: center;">
+
+![](./assets/images/readme-images/deployment-1.png)
+
+![](./assets/images/readme-images/deployment-2.png)
+
+![](./assets/images/readme-images/deployment-3.png)
+
+</div>
+
+## Creating a Fork
+
+Users may fork this repository by navigating to "Fork" and selecting "Create a new fork". One cannot fork from their repository. Hence, below, a screenshot of how this could be done are provided using a repository created by a different user:
+
+<div style="text-align: center; width=400px">
+
+![](./assets/images/readme-images/create-fork.png)
+
+</div>
+
+## Cloning a Repository
+
+Users may clone this repository by navigating to "Code" and copying the clone link. This link then can be used in Gitpod or a local code editor.  A screenshot of the links are provided below:
+
+<div style="text-align: center; width=400px">
+
+![](./assets/images/readme-images/create-branch.png)
+
+</div>
+
+(Please note this is not the only way to clone a repository)
 
 ## Credits
 
+### Platform Name 
 - _Quants Quest_ was suggested by  Microsoft Co-Pilot as the web platform name. 
-- eventListeners are added using the logic provided in love-maths walkthrough example.
-- The idea of using "querySelectorAll" method and ".checked" property in the checkAnswer() function code is taken from an example provided in the following page: https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
+
+### Code
+- eventListeners in Javascript files are added using the logic provided in love-maths walkthrough example.
+- The idea of using "querySelectorAll" method and ".checked" property in the checkAnswer() function code (in script.js file) is taken from an example provided in the following page: https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
 - The idea of getting dynamic values (such as question number, latest score, etc) from the webpage elements rather than using global variables in the javascript file is from Code Institute's love-maths walkthrough example. 
-- The idea of using localStorage was based on a discussion that I had with my mentor (Matt Bodden) during our second meeting for this project 
+- The idea of using localStorage to store username was based on a discussion that I had with my mentor (Matt Bodden) during our second meeting for this project 
 - The code I used for localStorage is written using a few sources:
   - The information and examples provided on https://www.w3schools.com/html/html5_webstorage.asp, and 
   - using examples from "Getting Form Values" and "Form Submission" modules on Code Institute learning pages.
-- In the checkAnswer() function, the idea of using "querySelectorAll" method and ".checked" property is taken from an example provided in the following page: https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
-- The design and logic of the score area is taken from Code Institute's love-maths walkthrough example, although the code used for this area is different than the love-maths example.
+- The design and logic of the score area is taken from Code Institute's love-maths walkthrough example, although the code used for this area in this project is different than the love-maths example.
 
 ### Images
 
@@ -278,5 +361,3 @@ The pages and functionality are tested on the following platforms:
   
   Matejka, J. and Fitzmaurice G. (2017). Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing.  Available at <https://www.autodesk.com/research/publications/same-stats-different-graphs> [Accessed 11 January 2022]
 - [tinyjpg](https://tinyjpg.com) platform is used for compressing images for uploads
-  
-- My mentor Matt Bodden's advice over resizing photos resolved issues for the design 
