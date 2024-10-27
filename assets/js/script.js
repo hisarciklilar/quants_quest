@@ -46,9 +46,6 @@ const questions = [
     }
 ];
 
-// post the number of questions in quiz
-document.getElementById("quiz-length").textContent = questions.length;
-
 // Add event listeners
 // I followed the love-maths walkthrough example to add page load listener 
 // I wrote my own version of the button listeners
@@ -57,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (button.getAttribute("id") === "submit") {
-                // alert("You clicked submit");
                 deactivateSubmit();
                 checkAnswer();
             } else if (button.getAttribute("id") === "next") {
@@ -65,9 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 let questionIndex = parseInt(document.getElementById("question-number").innerText);
                 if (questionIndex < questions.length) {
                     displayQuestion();
-                    // resetOptions(); // this is to remove the borders in previous question options
                 } else {
-                    // alert("end of game!");
                     displayEndOfQuiz();
                 }
             } else if (button.getAttribute("id") === "btn-close") {
@@ -82,20 +76,17 @@ document.addEventListener("DOMContentLoaded", function() {
 // First question is displayed once the page loads
 displayQuestion();
 
-
-// // below gets the options for question and add event listeners
-// for (let i=0; i<4; i++) {
-//     let option = document.getElementsByClassName('option-container')[i];
-//     // I used an example from the following page to insert a pointer cursor
-//     // https://www.w3docs.com/snippets/css/how-to-change-cursor-on-hover-in-css.html
-//     option.style.cursor = "pointer";
-//     // option.style.border="solid 1px";
-//     option.addEventListener("click", activateOption);
-// }
-
-
+/**
+ * This function first clears the feedback from previous question submission 
+ * It then loads the next question and its options. 
+ * I shows the "submit answer" button, which was hidden after previous question submission.
+ * It also calls displayInformation(questionIndex) and displayBookChapter(questionIndex)
+ * functions to get the information on the active question ready to be called by the user. 
+ */
 function displayQuestion() {
     document.getElementById("feedback").style.display = "none";
+    // post the number of questions in quiz
+    document.getElementById("quiz-length").textContent = questions.length;
     let questionIndex = parseInt(document.getElementById("question-number").innerText);
     let questionNumber = questionIndex + 1;
     // Information to be provided as feedback (hidden until the user requests for it)
@@ -110,22 +101,30 @@ function displayQuestion() {
         option.style.cursor = "pointer";
         option.addEventListener("click", function(){
             document.getElementById(`option-${i}`).checked = true;
-            // this.style.color = "blue"
         })
         };
     document.getElementById("submit").style.display = "inline";
     }
 
+/**
+ * This function calls the information about the active question. 
+ */
 function displayInformation(index) {
-    // let questionIndex = parseInt(document.getElementById("question-number").innerText);
     document.getElementById("modal-information").textContent = questions[index].feedback;
 }
 
+/**
+ * This function calls the relevant book chapter(s) about the active question. 
+ */
 function displayBookChapter(index) {
     // let questionIndex = parseInt(document.getElementById("question-number").innerText);
     document.getElementById("book-chapter").textContent = questions[index].chapter;
 }
 
+/**
+ * This function hides the "Submit Answer" button once the user submits an answer. 
+ * It prevents the user re-submitting multiple answers to the same question
+ */
 function deactivateSubmit() {
     document.getElementById("submit").style.display = "none";
 }
@@ -133,6 +132,14 @@ function deactivateSubmit() {
 // The idea of using "querySelectorAll" method and ".checked" property in the code below
 // is taken from an example provided in the following page:
 // https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
+
+/**
+ * This function checks user's answer by comparing the selected option with the 
+ * answer provided in the questions array. It calls functions to update the 
+ * correct/incorrect answer tallies and also to provide positive/negative feedback
+ * messages depending on user's performance. 
+ * It clears the selected option upon submission, preparing the page for next question
+ */
 function checkAnswer(){
     let questionNumber = parseInt(document.getElementById("question-number").innerText);
     let questionIndex = questionNumber - 1;
@@ -142,8 +149,7 @@ function checkAnswer(){
         if (questionOption.checked) {
             let selectedOptionNumber = optionNumber;
             //line below clears selection after submit
-            document.getElementById(`option-${selectedOptionNumber}`).checked = false;
-            // alert(`You selected option ${selectedOptionNumber}`);        
+            document.getElementById(`option-${selectedOptionNumber}`).checked = false;      
             if (questions[questionIndex].answers[selectedOptionNumber].correct === true) {
                 calculateCorrectTally();
                 displayPositiveFeedback();
@@ -158,6 +164,9 @@ function checkAnswer(){
     } 
 }
 
+/**
+ * This function posts a positive feedback message if the user answers the question correctly.
+ */
 function displayPositiveFeedback(){
 document.getElementById('feedback').style.display = "block";
 let html = 
@@ -167,6 +176,9 @@ let html =
 document.getElementById("feedback").innerHTML = html;
 }
 
+/**
+ * This function posts a negative feedback message if the user answers the question incorrectly.
+ */
 function displayNegativeFeedback(){
     document.getElementById('feedback').style.display = "block";
     let html = 
@@ -175,19 +187,29 @@ function displayNegativeFeedback(){
     `
     document.getElementById("feedback").innerHTML = html;
     }
-    
+
+/**
+ * This function updates the number of correct responses. 
+ */
 function calculateCorrectTally() {
     let correctScore = parseInt(document.getElementById("correct-score").innerText);
     correctScore++;
     document.getElementById("correct-score").textContent = `${correctScore}`;
 }
 
+/**
+ * This function updates the number of incorrect responses. 
+ */
 function calculateIncorrectTally() {
     let incorrectTally = parseInt(document.getElementById("incorrect-tally").innerText);
     incorrectTally++;
     document.getElementById("incorrect-tally").textContent = `${incorrectTally}`;
 }
 
+/**
+ * This function displays an end of quiz message, summarising the number of questions
+ * attempted by the user and how many they got correct and incorrect. 
+ */
 function displayEndOfQuiz() {
     let endOfQuizMessage = `<h3 class="end-of-quiz-message">End of quiz! </h3>`;
     let correctScore = parseInt(document.getElementById("correct-score").innerText);
@@ -199,6 +221,9 @@ function displayEndOfQuiz() {
     document.getElementById("feedback-container").innerHTML = endOfQuizScoreMessage;
 }
 
+/**
+ * This function provides more information about the active question. 
+ */
 function provideInformation() {
     document.getElementById("information-container").style.display = "block";
     document.getElementById("question-container").style.display = "none";
@@ -206,6 +231,10 @@ function provideInformation() {
     document.getElementById("info").style.display = "none";
 }
 
+/**
+ * This function hides the information on question while bringing question and 
+ * "tell me more" button on display. 
+ */
 function closeInformation() {
     document.getElementById("information-container").style.display = "none";
     document.getElementById("question-container").style.display = "block";

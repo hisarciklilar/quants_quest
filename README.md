@@ -62,6 +62,7 @@ The pages and functionality are tested on the following platforms:
 - The code I used for localStorage is written using a few sources:
   - The information and examples provided on https://www.w3schools.com/html/html5_webstorage.asp, and 
   - using examples from "Getting Form Values" and "Form Submission" modules on Code Institute learning pages.
+- In the checkAnswer() function, the idea of using "querySelectorAll" method and ".checked" property is taken from an example provided in the following page: https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/
 
 ### Images
 
