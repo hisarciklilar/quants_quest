@@ -442,6 +442,22 @@ https://www.w3schools.com/howto/howto_css_modals.asp
     border: 1px solid #1959cf;
 }
 
+.try-again {
+    text-align: center;
+    background-color: #1959cf;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border: #1959cf solid 1px;
+    border-radius: 5px;
+    margin: 30px auto;
+}
+
+.try-again:hover {
+    background-color: white;
+    border: #1959cf;
+    color: #1959cf;
+}
 
 /* ================================================== */
 /* Media query: tablets and larger (768px and higher) */

@@ -61,12 +61,13 @@ function startUsernameForm() {
 // "Getting Form Values" and "Form Submission" modules on Code Institute pages
 function submitHandle(event) {
     event.preventDefault(); 
+    // clear local storage
+    localStorage.removeItem("username");
     let usernameOne = document.getElementById('username-1').value;
     let usernameTwo = document.getElementById('username-2').value;
     localStorage.setItem("username", usernameOne);
     if (usernameOne === usernameTwo) {
         validateLength(usernameOne);
-        // saveUsername(usernameOne);
      } else {
         alert("Usernames do not match! Please try again.");
         startUsernameForm();

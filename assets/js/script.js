@@ -93,9 +93,6 @@ displayQuestion();
 //     option.addEventListener("click", activateOption);
 // }
 
-// function activateOption() {
-//     this.style.border = "2px solid red"
-// }
 
 function displayQuestion() {
     document.getElementById("feedback").style.display = "none";
