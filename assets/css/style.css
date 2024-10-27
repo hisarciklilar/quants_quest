@@ -204,7 +204,7 @@ footer div {
     margin: 10px 0;
   }
   
-  input[type=submit] {
+  #create {
     margin-top: 40px;
     margin-left: 0.75rem;
     padding: 0.75rem;
@@ -214,18 +214,29 @@ footer div {
     border-radius: 5px;
     width: 100px;
     font-size: medium;
+    text-align: center;
   }
-  
-  input[type=reset] {
-    margin-top: 40px;
-    margin-left: 0.75rem;
-    padding: 0.75rem;
+ 
+  #start-quiz-now {
+    margin: 100px;
+    text-align: center;
+    background-color:#1959cf;
+    color: white;
+    border: 1px solid #1959cf;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  #start-quiz-now:hover {
+    color:#1959cf;
     background-color: white;
-    color: #1959cf;
-    border: solid 1px #1959cf;
-    border-radius: 5px;
-    font-size: medium;
-    margin-left: 50px;
+    border: 1px solid #1959cf;
+  }
+
+  #message {
+    text-align: center;
+    padding: 50px;
   }
 
 /* ***************** */

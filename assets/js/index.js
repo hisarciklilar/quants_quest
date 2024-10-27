@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 function startUsernameForm() {
-    html = `
-    <form id="username-form" action="./thankyou.html" method="get">
-          <h2>Create User Name</h2>
-
+    let html = 
+    `
+    <form id="username-form">
+      <h2>Create User Name</h2>
           <!-- Adding text fields -->
           <div class="user-detail">
             <div>
@@ -43,25 +43,40 @@ function startUsernameForm() {
                 aria-labelledby="username"
               >
             </div>
-            <div>
-              <label for="email-address">Your email address</label>
-              <input
-                id="email-address"
-                type="email"
-                name="email_address"
-                placeholder="Your email address"
-                required
-                class="block-label"
-                aria-labelledby="email-address"
-              >
-            </div>
           </div>
 
-          <div class="confirm">
-            <input type="submit" class="block-label" value="Create" aria-label="Submit">
-            <input type="reset" value="Reset" aria-label="Reset">
+          <div>
+            <button type="submit" id="create">Create</submit>
           </div>
         </form>
-        `
-    document.getElementById("index-main").innerHTML = html;     
+    `
+    document.getElementById("login-container").innerHTML = html;   
+    document.getElementById('username-form').addEventListener('submit', submitHandle);
 }
+
+// The following code for localStorage is written using a few sources:
+// The information and examples provided on 
+// https://www.w3schools.com/html/html5_webstorage.asp
+// after my second meeting with my mentor, Matt Bodden; and also examples from
+// "Getting Form Values" and "Form Submission" modules on Code Institute pages
+function submitHandle(event) {
+    event.preventDefault(); 
+    let usernameOne = document.getElementById('username-1').value;
+    let usernameTwo = document.getElementById('username-2').value;
+    localStorage.setItem("username", usernameOne);
+    if (usernameOne === usernameTwo) {
+        let html = `
+        <div id="message"> Username "${usernameOne}" saved! Thank you! </div>
+        <a href="quiz.html" id="start-quiz-now"> <div>Start the quiz!</div></a>
+        `;
+        document.getElementById("login-container").style.backgroundColor = "white"
+        document.getElementById("login-container").style.border = "5px solid #3a3a3a";
+        document.getElementById("login-container").style.borderRadius = "10px";
+        document.getElementById("login-container").innerHTML = html;
+     } else {
+        alert("Usernames do not match! Please try again.");
+        startUsernameForm();
+    }
+};
+
+
