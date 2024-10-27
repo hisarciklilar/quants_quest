@@ -175,7 +175,6 @@ I mostly worked on hand-written wireframes as it was easier to draw quickly. A f
  
 ![](./assets/images/readme-images/wireframe-4c.png) 
 
-
 </div>
 
 
