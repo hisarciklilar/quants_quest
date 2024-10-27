@@ -297,6 +297,7 @@ The pages and functionality are tested on the following platforms:
 
 | Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
 | -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
+|Question numbering showing progress | Header in quiz page reveals the number of total questions in quiz and which question the user is answering | Took the test systematically with various combinations of correct and incorrect answers; also adding the "tell me more" button to the combination | Header showed the correct number of total questions and the question number that is being answered | Pass|
 | Cursor's look during option selection | Cursor changing to pointer on any text area for the options (answer selection)  | Move cursor over answer option text | Cursor changes to pointer when over text | Pass |
 | Radio buttons | Allow single option selection by the user| Select different answer options to see if selection is active in last clicked button | Only  a single option selection is allowed | Pass |
 | "Submit answer" button  | A positive or negative feedback provided below question options indicating whether or not the submitted answer is correct | (1) Selected wrong answer to see the negative feedback text; (2) Selected correct answer to see the positive feedback text | Positive or negative feedback appears below options with a text, a small icon and color differentiation | Pass |
