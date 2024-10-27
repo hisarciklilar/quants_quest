@@ -65,7 +65,26 @@ function submitHandle(event) {
     let usernameTwo = document.getElementById('username-2').value;
     localStorage.setItem("username", usernameOne);
     if (usernameOne === usernameTwo) {
-        let html = `
+        validateLength(usernameOne);
+        // saveUsername(usernameOne);
+     } else {
+        alert("Usernames do not match! Please try again.");
+        startUsernameForm();
+    }
+};
+
+function validateLength(usernameOne) {
+    let usernameLength = usernameOne.length;
+    if (usernameLength < 8 | usernameLength > 10) {
+        alert("Username must have between 8 to 10 characters");
+        startUsernameForm();
+    } else {
+        saveUsername(usernameOne);
+    }
+}
+
+function saveUsername(usernameOne) {
+    let html = `
         <div id="message"> Username "${usernameOne}" saved! Thank you! </div>
         <a href="quiz.html" id="start-quiz-now"> <div>Start the quiz!</div></a>
         `;
@@ -73,10 +92,4 @@ function submitHandle(event) {
         document.getElementById("login-container").style.border = "5px solid #3a3a3a";
         document.getElementById("login-container").style.borderRadius = "10px";
         document.getElementById("login-container").innerHTML = html;
-     } else {
-        alert("Usernames do not match! Please try again.");
-        startUsernameForm();
-    }
-};
-
-
+}
