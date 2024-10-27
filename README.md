@@ -229,6 +229,36 @@ __Metrics (script.js page)__
 - Largest function has 15 statements in it, while the median is 3.
 - The most complex function has a cyclomatic complexity value of 5 while the median is 1.
 
+### Lighthouse
+
+index.html and quiz.html files are tested using lighthouse in each of the following options:
+- mobile
+- desktop
+
+
+#### Lighthouse: mobile
+
+Both pages receive high score for all aspects when tested for the mobile platform. 
+
+<div style="text-align: center; width: 500px;">
+
+![](./assets/images/readme-images/lighthouse-index-mobile.png)
+
+![](./assets/images/readme-images/lighthouse-quiz-mobile.png)
+</div>
+
+#### Lighthouse: desktop
+
+Both pages receive score of 100 for all aspects when tested for the desktop platform. 
+
+<div style="text-align: center; width: 500px;">
+
+![](./assets/images/readme-images/lighthouse-index-desktop.png)
+
+![](./assets/images/readme-images/lighthouse-quiz-desktop.png)
+
+</div>
+
 ### Manual Testing
 
 The pages and functionality are tested on the following platforms: 

@@ -279,9 +279,9 @@ footer div {
 }
 
 .btn-tell-more {
-    background-color: rgb(227, 95, 47);
+    background-color: rgb(139, 53, 22);
     color: white;
-    border: 1px solid rgb(228, 89, 38);
+    border: 1px solid rgb(122, 44, 15);
     padding: 5px;
     border-radius: 5px;
     margin: 10px;
@@ -290,8 +290,8 @@ footer div {
 
 .btn-tell-more:hover {
     background-color: white;
-    color: rgb(227, 95, 47);
-    border: rgb(227, 95, 47) ;
+    color: rgb(139, 53, 22);
+    border: rgb(139, 53, 22) ;
 }
 
 .btn {
