@@ -17,9 +17,9 @@ The designer's aim is to test the user's knowledge on the basic concepts of Econ
 
 An interactive multiple choice quiz is used with an intention of breaking the anxiety around the learning and application of Econometric methods.
 
-![](./assets/images/readme-images/Responsiveness-Index.png)
+![](./assets/images/readme-images/responsiveness-index.png)
 
-![](./assets/images/readme-images/Responsiveness-Quiz.png)
+![](./assets/images/readme-images/responsiveness-quiz.png)
 
 _Note_: Above images are obtained through http://ami.responsivedesign.is/
 
@@ -108,7 +108,7 @@ It is used here for users to have a better understanding of the importance of da
 
 <div style="width: 500px; text-align: center;">
 
-![](./assets/images/readme-images/AllDinosGrey.jpg)
+![](./assets/images/readme-images/all-dinos-grey.png)
 
 </div>
 
